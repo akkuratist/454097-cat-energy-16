@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Андрей Чупраков](https://up.htmlacademy.ru/adaptive/16/user/454097).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Мирошниченко](https://up.htmlacademy.ru/htmlcss/24/user/591417).
 
 ---
 
