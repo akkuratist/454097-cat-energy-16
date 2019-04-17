@@ -4,27 +4,29 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header class="page-header">
     <section class="page-header__top-bar">
       <a class="site-logo page-header__logo">
-        <img class="logo__icon" src="http://placehold.it/34x40" width="34" height="40">
-        <img class="logo__text" src="http://placehold.it/100x20" width="100" height="20">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="190" height="42"
+          alt="Логотип кэт энерджи">
       </a>
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
     </section>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item site-list__item--active">
-          <a>Главная</a>
+      <ul class="main-nav__list site-list list">
+        <li class="site-list__item">
+          <a class="site-list__link site-list__link--active">Главная</a>
         </li>
         <li class="site-list__item">
-          <a href="catalog.html">Каталог продукции</a>
+          <a class="site-list__link" href="catalog.html">Каталог продукции</a>
         </li>
         <li class="site-list__item">
-          <a href="form.html">Подбор программы</a>
+          <a class="site-list__link" href="form.html">Подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -32,12 +34,12 @@
   <main class="page-main">
     <section class="promo">
       <h1 class="promo__title section-title">Функциональное питание для котов</h1>
-      <p class="promo__slogan">Занялся собой? Займись котом!</p>
-      <img class="promo__image" src="http://placehold.it/280x270" width="280" height="270">
-      <a class="button promo__button promo__link" href="form.html">Подобрать программу</a>
+      <p class="section-description promo__slogan">Занялся собой? Займись котом!</p>
+      <img class="promo__image" src="img/index-can-mobile@1x.png" width="280" height="271">
+      <a class="button promo__link" href="form.html">Подобрать программу</a>
     </section>
-    <section class="categories">
-      <ul class="categories__list">
+    <section class="categories wrapper">
+      <ul class="categories__list list">
         <li class="categories-item categories-item--slim">
           <h3 class="categories__title">Похудение</h3>
           <p class="categories__description">
@@ -56,9 +58,9 @@
         </li>
       </ul>
     </section>
-    <section class="advantages">
+    <section class="advantages wrapper">
       <h2 class="advantages__title section-title">Как это работает</h2>
-      <ul class="advantages__list">
+      <ul class="advantages__list list">
         <li class="advantage advantages__item advantages__item--healthy">
           <p class="advantages__description">
             Функциональное питание содержит только полезные питательные вещества.
@@ -82,47 +84,49 @@
       </ul>
     </section>
     <section class="before-after">
-      <h2 class="before-after__title section-title">Живой пример</h2>
-      <p class="before-after__promo">
-        Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
-        изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-      </p>
-      <ul class="before-after__stats-list">
-        <li class="stats-list__item">
-          <b class="stats-item__amount">5 кг</b>
-          <span class="stats-item__type">снижение веса</span>
-        </li>
-        <li class="stats-list__item">
-          <b class="stats-item__amount">60 дней</b>
-          <span class="stats-item__type">затрачено времени</span>
-        </li>
-      </ul>
-      <p class="before-after__cost">Затрачено на питание: 15000 руб.</p>
-      <section class="before-after__slider slider">
-        <ul class="before-after__slider-list slider__list">
-          <li class="before-after__item before-after__item--before slider__item">
-            <img class="before-after__image before-after__image--before" src="http://placehold.it/311x232" width="311"
-              height="232">
+      <div class="wrapper">
+        <h2 class="before-after__title section-title">Живой пример</h2>
+        <p class="before-after__promo">
+          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
+          изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+        </p>
+        <ul class="before-after__stats stats-list list">
+          <li class="stats-list__item">
+            <span class="stats-item__amount">5 кг</span>
+            <span class="stats-item__type">снижение веса</span>
           </li>
-          <li class="before-after__item before-after__item--after slider__item">
-            <img class="before-after__image before-after__image--after" src="http://placehold.it/311x232" width="311"
-              height="232">
+          <li class="stats-list__item">
+            <span class="stats-item__amount">60 дней</span>
+            <span class="stats-item__type">затрачено времени</span>
           </li>
         </ul>
-        <ul class="before-after__toggles">
-          <li class="before-after__toggle before-after__toggle--before">
-            <label class="before-after__label" for="before-after--before">Было</label>
-            <input class="visually-hidden" type="radio" id="before-after--before" name="before-after-radio">
-          </li>
-          <li class="before-after__toggle before-after__toggle--after">
-            <label class="before-after__label" for="before-after--after">Стало</label>
-            <input class="visually-hidden" type="radio" id="before-after--after" name="before-after-radio">
-          </li>
-        </ul>
-      </section>
+        <p class="before-after__cost">Затраты на питание: 15000 руб.</p>
+        <section class="before-after__slider slider">
+          <ul class="before-after__slider-list list">
+            <li class="before-after__item before-after__item--before slider__item">
+              <img class="before-after__image before-after__image--before" src="img/before-mobile@1x.png" width="311"
+                height="232" alt="Кот просто огромен до начала приема Кэт энерджи слим!">
+            </li>
+            <li class="before-after__item before-after__item--after slider__item">
+              <img class="before-after__image before-after__image--after" src="img/after-mobile@1x.png" width="311"
+                height="232" alt="Спустя месяц кот стройный и в отличной форме!">
+            </li>
+          </ul>
+          <ul class="before-after__toggles list">
+            <li class="before-after__toggle before-after__toggle--before">
+              <label class="before-after__label" for="before-after--before">Было</label>
+              <input class="visually-hidden" type="radio" id="before-after--before" name="before-after-radio">
+            </li>
+            <li class="before-after__toggle before-after__toggle--after">
+              <label class="before-after__label" for="before-after--after">Стало</label>
+              <input class="visually-hidden" type="radio" id="before-after--after" name="before-after-radio">
+            </li>
+          </ul>
+        </section>
+      </div>
     </section>
     <section class="contacts">
-      <h2 class="site-title site-title--contacts">Приглашаем к сотрудничеству дилеров!</h2>
+      <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
       <p class="contacts__address">
         ул. Большая Конюшенная, д. 19/8
         Санкт-Петербург
@@ -136,10 +140,10 @@
   </main>
   <footer class="page-footer">
     <a class="site-logo page-footer__logo">
-      <img class="logo__text" src="http://placehold.it/100x20" width="100" height="20">
+      <img class="logo__text" src="img/logo-footer.svg" width="100" height="20">
     </a>
     <section class="page-footer__social social">
-      <ul class="social__list">
+      <ul class="social-list list">
         <li class="social-item">
           <a class="social__link social__link--vk" href="#">Вконтакте</a>
         </li>
@@ -154,7 +158,7 @@
     <section class="page-footer__copyright copyright">
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       <a class="copyright__link copyright-link--logo" href="https://htmlacademy.ru/intensive/adaptive">
-        <img class="copyright__logo" src="http://placehold.it/27x34" alt="Логотип html academy">
+        <img class="copyright__logo" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип html academy">
       </a>
     </section>
   </footer>

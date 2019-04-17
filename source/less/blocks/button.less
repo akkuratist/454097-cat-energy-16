@@ -1,0 +1,35 @@
+.button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: @Oswald;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  background-color: @green;
+  color: white;
+}
+
+.button:hover,
+.button:active {
+  background-color: @darkgreen;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button--grey {
+  background-color: @lightgrey;
+  color: black;
+}
+
+.button--grey:hover,
+.button--grey:active {
+  background-color: darken(@lightgrey, 2.9%);
+}
+
+.button--grey:active {
+  color: rgba(0, 0, 0, 0.3);
+}
