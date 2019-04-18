@@ -1,11 +1,13 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("../fonts/oswaldmedium.woff"),
-  url("../fonts/oswaldmedium.woff2"),
-  url("../fonts/oswaldregular.woff2"),
-  url("../fonts/oswaldregular.woff")
-  }
+
+  src:
+    url("../fonts/oswaldmedium.woff"),
+    url("../fonts/oswaldmedium.woff2"),
+    url("../fonts/oswaldregular.woff2"),
+    url("../fonts/oswaldregular.woff");
+}
 
 @import "variables.less";
 @import "content.less";
@@ -30,8 +32,6 @@
 @import "blocks/main-form.less";
 @import "blocks/main-nav.less";
 @import "blocks/map.less";
-@import "blocks/main-form.less";
-@import "blocks/map.less";
 @import "blocks/page-footer.less";
 @import "blocks/page-header.less";
 @import "blocks/page-main.less";
@@ -45,9 +45,8 @@
 @import "blocks/social.less";
 
 
-
 html {
- box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
@@ -57,14 +56,14 @@ html {
 }
 
 body {
-font-size: 14px;
-line-height: 18px;
-font-family: "Arial", sans-serif;
-color: @lightblack;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Arial", sans-serif;
+  color: @lightblack;
 }
 
 a {
-text-decoration: none;
+  text-decoration: none;
 }
 
 
