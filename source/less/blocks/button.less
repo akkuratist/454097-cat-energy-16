@@ -11,28 +11,28 @@
   text-transform: uppercase;
 
   background-color: @green;
-}
 
-.button:hover,
-.button:active {
-  background-color: @darkgreen;
-}
+  &:hover,
+  &:active {
+    background-color: @darkgreen;
+  }
 
-.button:active {
-  color: rgba(255, 255, 255, 0.3);
-}
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 
-.button--grey {
-  color: black;
+  &--grey {
+    color: @blacky;
 
-  background-color: @lightgrey;
-}
+    background-color: @lightgrey;
+  }
 
-.button--grey:hover,
-.button--grey:active {
-  background-color: darken(@lightgrey, 2.9%);
-}
+  &--grey:hover,
+  &--grey:active {
+    background-color: darken(@lightgrey, 2.9%);
+  }
 
-.button--grey:active {
-  color: rgba(0, 0, 0, 0.3);
+  &--grey:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
