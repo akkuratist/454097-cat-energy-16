@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "Oswald";
+
+  src:
+    url("../fonts/oswaldregular.woff2"),
+    url("../fonts/oswaldregular.woff");
+}
+
+@font-face {
+  font-family: "Oswald";
+
+  src:
+    url("../fonts/oswaldmedium.woff"),
+    url("../fonts/oswaldmedium.woff2");
+}
+
+
+@import "css/normalize.css";
+@import "variables.less";
+@import "content.less";
+@import "mixins.less";
+@import "blocks/advantage.less";
+@import "blocks/advantages.less";
+@import "blocks/before-after.less";
+@import "blocks/button.less";
+@import "blocks/catalog-all.less";
+@import "blocks/catalog-extra.less";
+@import "blocks/catalog-gift.less";
+@import "blocks/catalog-item.less";
+@import "blocks/catalog-list.less";
+@import "blocks/catalog.less";
+@import "blocks/categories-item.less";
+@import "blocks/categories.less";
+@import "blocks/contacts.less";
+@import "blocks/copyright.less";
+@import "blocks/extra-table.less";
+@import "blocks/form-list.less";
+@import "blocks/food-programm-form.less";
+@import "blocks/main-form.less";
+@import "blocks/main-nav.less";
+@import "blocks/map.less";
+@import "blocks/page-footer.less";
+@import "blocks/page-header.less";
+@import "blocks/page-main.less";
+@import "blocks/plus.less";
+@import "blocks/promo.less";
+@import "blocks/section-title.less";
+@import "blocks/sub-section-title.less";
+@import "blocks/site-logo.less";
+@import "blocks/slider.less";
+@import "blocks/social-item.less";
+@import "blocks/social-list.less";
+@import "blocks/social.less";
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Arial", sans-serif;
+  color: @lightblack;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
