@@ -6,27 +6,16 @@
   text-transform: uppercase;
 }
 
-.site-list {
-  .list-reset();
+@media (min-width: @tablet-width) {
+  .main-nav {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: left;
+  }
 }
 
-.site-list__item {
-  padding: 20px 0;
-}
-
-.site-list__link {
-  color: @blacky;
-}
-
-.site-list__link:hover,
-.site-list__link:focus {
-  color: rgba(17, 17, 17, 0.6);
-}
-
-.site-list__link:active {
-  color: rgba(17, 17, 17, 0.3);
-}
-
-.site-list__link--active {
-  border-bottom: 2px solid @green;
+@media (min-width: @desktop-width) {
+  .main-nav {
+    font-size: 20px;
+  }
 }

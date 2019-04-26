@@ -1,21 +1,22 @@
 @font-face {
   font-family: "Oswald";
+  font-weight: 400;
 
   src:
-    url("../fonts/oswaldregular.woff2"),
-    url("../fonts/oswaldregular.woff");
+    url("../fonts/oswaldregular.woff2") format("woff2"),
+    url("../fonts/oswaldregular.woff") format("woff");
 }
 
 @font-face {
   font-family: "Oswald";
-
+  font-weight: 600;
   src:
-    url("../fonts/oswaldmedium.woff"),
-    url("../fonts/oswaldmedium.woff2");
+    url("../fonts/oswaldmedium.woff") format("woff"),
+    url("../fonts/oswaldmedium.woff2") format("woff2");
 }
 
 
-@import "css/normalize.css";
+@import "../../node_modules/normalize.css/normalize.css";
 @import "variables.less";
 @import "content.less";
 @import "mixins.less";
@@ -47,11 +48,12 @@
 @import "blocks/section-title.less";
 @import "blocks/sub-section-title.less";
 @import "blocks/site-logo.less";
+@import "blocks/site-list.less";
 @import "blocks/slider.less";
 @import "blocks/social-item.less";
 @import "blocks/social-list.less";
 @import "blocks/social.less";
-
+@import "blocks/wrapper.less";
 
 html {
   box-sizing: border-box;
@@ -64,6 +66,9 @@ html {
 }
 
 body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
   font-size: 14px;
   line-height: 18px;
   font-family: "Arial", sans-serif;
@@ -73,7 +78,6 @@ body {
 a {
   text-decoration: none;
 }
-
 
 .visually-hidden {
   position: absolute;

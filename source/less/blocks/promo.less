@@ -1,10 +1,15 @@
 .promo {
+  min-height: 480px;
   font-family: @Oswald;
+  text-align: center;
   color: white;
 
-  background-image: url("/img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-size: 320px, 301px;
+  background-image:
+  url("/img/index-can-mobile@1x.png"),
+  url("/img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 280px 271px, 320px 301px;
+  background-position: center 160px, top center;
 }
 
 .promo__link {
@@ -23,4 +28,51 @@
 
 .promo__slogan {
   text-transform: uppercase;
+  margin-bottom: 300px;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    min-height: 850px; // временно
+    color: @blacky;
+    padding-left: 90px;
+    text-align: left;
+    background-image: url("/img/index-can-tablet@1x.jpg");
+    background-size: 709px 609px;
+  }
+
+  .promo__wrapper {
+    width: 500px;
+  }
+
+  .promo__title {
+    color: @blacky;
+  }
+
+  .promo__slogan {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 48px;
+  }
+
+  .promo__link {
+    width: 245px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 14px 25px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    min-height: 600px;
+    padding-left: 80px;
+    background-image:
+    url("/img/index-can-desktop@1x.png"),
+    url("/img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 552px 499px, 720px 696px;
+    background-position: center 30px, right -300px;
+    overflow: visible;
+  }
 }

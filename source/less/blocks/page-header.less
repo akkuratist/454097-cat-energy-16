@@ -1,3 +1,53 @@
+.page-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
 .page-header__top-bar {
+  padding: 0px 20px;
+  min-height: 65px; //времянка
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   border-bottom: @lightgreyborder;
+}
+
+.page-header__logo {
+  width: 230px;
+}
+
+.page-header__menu-toggle {
+  width: 50px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__wrapper {
+    width: auto;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0 30px;
+  }
+
+  .page-header__menu-toggle {
+    display: none;
+  }
+
+  .page-header__logo {
+    width: 230px;
+  }
+
+  .page-header__top-bar {
+    width: 230px;
+    border: 0;
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    padding-top: 50px;
+  }
+
+
 }
