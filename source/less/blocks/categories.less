@@ -2,6 +2,10 @@
   .list-reset();
 }
 
-.categories-item {
-  margin-bottom: 20px;
+@media (min-width: @desktop-width) {
+  .categories__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

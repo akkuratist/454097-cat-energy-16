@@ -10,35 +10,37 @@
 
 <body>
   <header class="page-header">
-    <section class="page-header__top-bar">
-      <a href="index.html" class="site-logo page-header__logo">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="190" height="42"
-          alt="Логотип кэт энерджи">
-      </a>
-      <button class="page-header__menu-toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-    </section>
-    <nav class="main-nav">
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item">
-          <a class="site-list__link" href="index.html">Главная</a>
-        </li>
-        <li class="site-list__item site-list__item--active">
-          <a class="site-list__link site-list__link--active">Каталог продукции</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="form.html">Подбор программы</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="page-header__wrapper wrapper">
+      <section class="page-header__top-bar">
+        <a class="site-logo page-header__logo">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="190" height="42"
+            alt="Логотип кэт энерджи">
+        </a>
+        <button class="page-header__menu-toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </section>
+      <nav class="main-nav">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link site-list__link--active">Каталог продукции</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main class="page-main catalog-main">
-    <h1 class="section-title">Каталог продукции</h1>
+    <h1 class="section-title catalog__title">Каталог продукции</h1>
     <section class="catalog">
       <a name="pro"></a>
       <ul class="catalog-list">
-        <li class="catalog-item catalog-item--imaged">
+        <li class="catalog-item">
           <a href="#" class="catalog-item__link">
             <img class="catalog-item__image" src="img/chicken-small-mobile@1x.jpg" width="140" height="144"
               alt="Ведерко Кэт энерджи про с курицей, 500 грамм">
@@ -58,9 +60,9 @@
               <td class="catalog-item__value">700 Р.</td>
             </tr>
           </table>
-          <a class="button catalog-item__button make-order" href="#">Заказать</a>
+          <a class="button catalog-item__button" href="#">Заказать</a>
         </li>
-        <li class="catalog-item catalog-item--imaged">
+        <li class="catalog-item">
           <a href="#" class="catalog-item__link">
             <img class="catalog-item__image" src="img/chicken-big-mobile@1x.jpg" width="140" height="144"
               alt="Ведерко Кэт энерджи про с курицей, 1000 грамм">
@@ -80,9 +82,9 @@
               <td class="catalog-item__value">1000 Р.</td>
             </tr>
           </table>
-          <a class="button catalog-item__button make-order" href="#">Заказать</a>
+          <a class="button catalog-item__button" href="#">Заказать</a>
         </li>
-        <li class="catalog-item catalog-item--imaged">
+        <li class="catalog-item">
           <a href="#" class="catalog-item__link">
             <img class="catalog-item__image" src="img/fish-small-mobile@1x.jpg" width="140" height="144"
               alt="Ведерко Кэт энерджи про с рыбой, 500 грамм">
@@ -102,11 +104,11 @@
               <td class="catalog-item__value">1000 Р.</td>
             </tr>
           </table>
-          <a class="button catalog-item__button make-order" href="#">Заказать</a>
+          <a class="button catalog-item__button" href="#">Заказать</a>
         </li>
-        <li class="catalog-item catalog-item--imaged">
+        <li class="catalog-item">
           <a href="#" class="catalog-item__link">
-            <img class="catalog__image" src="img/fish-big-mobile@1x.jpg" width="140" height="144"
+            <img class="catalog-item__image" src="img/fish-big-mobile@1x.jpg" width="140" height="144"
               alt="Ведерко Кэт энерджи про с рыбой, 1000 грамм">
             <h3 class="catalog-item__title">Cat Energy pro 1000 г</h3>
           </a>
@@ -124,9 +126,9 @@
               <td class="catalog-item__value">1000 Р.</td>
             </tr>
           </table>
-          <a class="button catalog-item__button make-order" href="#">Заказать</a>
+          <a class="button catalog-item__button" href="#">Заказать</a>
         </li>
-        <li class="catalog-item catalog-item--imaged">
+        <li class="catalog-item">
           <a name="slim"></a>
           <a href="#" class="catalog-item__link">
             <img class="catalog-item__image" src="img/buckwheat-small-mobile@1x.jpg" width="140" height="144"
@@ -147,9 +149,9 @@
               <td class="catalog-item__value">400 Р.</td>
             </tr>
           </table>
-          <a class="button catalog-item__button make-order" href="#">Заказать</a>
+          <a class="button catalog-item__button" href="#">Заказать</a>
         </li>
-        <li class="catalog-item catalog-item--imaged">
+        <li class="catalog-item">
           <a href="#" class="catalog-item__link">
             <img class="catalog-item__image" src="img/buckwheat-big-mobile@1x.jpg" width="140" height="144"
               alt="Ведерко Кэт энерджи слим с гречкой, 1000 грамм">
@@ -169,9 +171,9 @@
               <td class="catalog-item__value">700 Р.</td>
             </tr>
           </table>
-          <a class="button catalog-item__button make-order" href="#">Заказать</a>
+          <a class="button catalog-item__button" href="#">Заказать</a>
         </li>
-        <li class="catalog-item catalog-item--imaged">
+        <li class="catalog-item">
           <a href="#" class="catalog-item__link">
             <img class="catalog-item__image" src="img/rice-small-mobile@1x.jpg" width="140" height="144"
               alt="Ведерко Кэт энерджи слим с рисом, 500 грамм">
@@ -191,59 +193,59 @@
               <td class="catalog-item__value">500 Р.</td>
             </tr>
           </table>
-          <a class="button catalog-item__button make-order" href="#">Заказать</a>
+          <a class="button catalog-item__button" href="#">Заказать</a>
+        </li>
+        <li class="catalog-item catalog-item--show-all">
+          <span class="plus catalog__plus"></span>
+          <h3 class="catalog-item__title">Показать еще 100500 товаров</h3>
+          <p class="catalog-item__promo-text">
+            На самом деле вкусов гораздо больше!
+          </p>
+          <a href="#" class="button button--grey button--show-all">Показать все</a>
         </li>
       </ul>
-      <section class="catalog-all">
-        <span class="plus catalog__plus"></span>
-        <b class="catalog-all__title">Показать еще 100500 товаров</b>
-        <p class="catalog-all__text">
-          На самом деле вкусов гораздо больше!
-        </p>
-        <a href="#" class="button button--grey button--show-all">Показать все</a>
-      </section>
       <section class="catalog-extra">
         <h2 class="sub-section-title catalog-extra__title">Дополнительные товары</h2>
         <ul class="catalog-list">
-          <li class="catalog-item catalog-item--simple">
-            <h3 class="catalog-item__title">Сахарозаменитель</h3>
-            <table class="catalog-item__table">
+          <li class="catalog-extra-item">
+            <h3 class="catalog-extra-item__title">Сахарозаменитель</h3>
+            <table class="catalog-extra-item__table">
               <tr>
-                <td class="catalog-item__field">1 упаковка (100 г.) </td>
-                <td class="catalog-item__value">200 Р. </td>
+                <td class="catalog-extra-item__field">1 упаковка (100 г.) </td>
+                <td class="catalog-extra-item__value">200 Р. </td>
               </tr>
             </table>
-            <a class="button catalog-item__button make-order" href="#">Заказать</a>
+            <a class="button catalog-extra-item__button" href="#">Заказать</a>
           </li>
-          <li class="catalog-item catalog-item--simple">
-            <h3 class="catalog-item__title">Питьевая вода</h3>
-            <table class="catalog-item__table extra-table">
+          <li class="catalog-extra-item">
+            <h3 class="catalog-extra-item__title">Питьевая вода</h3>
+            <table class="catalog-extra-item__table extra-table">
               <tr>
-                <td class="catalog-item__field">5 литров </td>
-                <td class="catalog-item__value">50 Р. </td>
+                <td class="catalog-extra-item__field">5 литров </td>
+                <td class="catalog-extra-item__value">50 Р. </td>
               </tr>
             </table>
-            <a class="button catalog-item__button make-order" href="#">Заказать</a>
+            <a class="button catalog-extra-item__button" href="#">Заказать</a>
           </li>
-          <li class="catalog-item catalog-item--simple">
-            <h3 class="catalog-item__title">Молоко</h3>
-            <table class="catalog-item__table extra-table">
+          <li class="catalog-extra-item">
+            <h3 class="catalog-extra-item__title">Молоко</h3>
+            <table class="catalog-extra-item__table">
               <tr>
-                <td class="catalog-item__field">1 литр </td>
-                <td class="catalog-item__value">100 Р. </td>
+                <td class="catalog-extra-item__field">1 литр </td>
+                <td class="catalog-extra-item__value">100 Р. </td>
               </tr>
             </table>
-            <a class="button catalog-item__button make-order" href="#">Заказать</a>
+            <a class="button catalog-extra-item__button" href="#">Заказать</a>
           </li>
-          <li class="catalog-item catalog-item--simple">
-            <h3 class="catalog-item__title">Витамины</h3>
-            <table class="catalog-item__table extra-table">
+          <li class="catalog-extra-item">
+            <h3 class="catalog-extra-item__title">Витамины</h3>
+            <table class="catalog-extra-item__table">
               <tr>
-                <td class="catalog-item__field">1 упаковка (30 г.) </td>
-                <td class="catalog-item__value">300 Р. </td>
+                <td class="catalog-extra-item__field">1 упаковка (30 г.) </td>
+                <td class="catalog-extra-item__value">300 Р. </td>
               </tr>
             </table>
-            <a class="button catalog-item__button make-order" href="#">Заказать</a>
+            <a class="button catalog-extra-item__button" href="#">Заказать</a>
           </li>
         </ul>
         <section class="catalog-gift">
@@ -255,42 +257,47 @@
       </section>
     </section>
     <section class="contacts">
-      <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
-      <p class="contacts__address">
-        ул. Большая Конюшенная, д. 19/8
-        Санкт-Петербург
-      </p>
-      <section class="map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1554636669327!5m2!1sru!2sru"
-          width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <section class="contacts__text">
+        <h2 class="contacts__title">Приглашаем к&nbspсотрудничеству дилеров!</h2>
+        <p class="contacts__address">
+          ул. Большая<br> Конюшенная, д. 19/8
+          <span class="contacts__city">Санкт-Петербург
+          </span>
+        </p>
+      </section>
+      <section class="contacts__map map">
+        <!-- <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1554636669327!5m2!1sru!2sru"
+              width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
       </section>
     </section>
   </main>
 
   <footer class="page-footer">
-    <a class="page-footer__logo" href="index.html">
-      <img class="logo__text" src="http://placehold.it/100x20" width="100" height="20">
-    </a>
-    <section class="page-footer__social social">
-      <ul class="social-list">
-        <li class="social-item">
-          <a class="social__link social__link--vk" href="#">Вконтакте</a>
-        </li>
-        <li class="social-item">
-          <a class="social__link social__link--inst" href="#">Инстаграм</a>
-        </li>
-        <li class="social-item">
-          <a class="social__link social__link--fb" href="#">Фейсбук</a>
-        </li>
-      </ul>
-    </section>
-    <section class="page-footer__copyright copyright">
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-      <a class="copyright__link copyright-link--logo" href="https://htmlacademy.ru/intensive/adaptive">
-        <img class="copyright__logo" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип html academy">
+    <div class="page-footer__wrapper wrapper">
+      <a class="page-footer__logo" href="index.html">
+        <img class="logo__text" src="img/logo-footer.svg" width="100" height="20">
       </a>
-    </section>
+      <section class="page-footer__social social">
+        <ul class="social-list">
+          <li class="social-item">
+            <a class="social__link social__link--vk" href="#">Вконтакте</a>
+          </li>
+          <li class="social-item">
+            <a class="social__link social__link--inst" href="#">Инстаграм</a>
+          </li>
+          <li class="social-item">
+            <a class="social__link social__link--fb" href="#">Фейсбук</a>
+          </li>
+        </ul>
+      </section>
+      <section class="page-footer__copyright copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="copyright__link copyright__link--logo" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="copyright__logo" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип html academy">
+        </a>
+      </section>
+    </div>
   </footer>
 </body>
 

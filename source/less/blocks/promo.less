@@ -1,15 +1,13 @@
 .promo {
   min-height: 480px;
+
   font-family: @Oswald;
   text-align: center;
   color: white;
 
-  background-image:
-  url("/img/index-can-mobile@1x.png"),
-  url("/img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-size: 280px 271px, 320px 301px;
-  background-position: center 160px, top center;
+  background-image: url("/img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 320px 305px;
 }
 
 .promo__link {
@@ -27,52 +25,74 @@
 }
 
 .promo__slogan {
-  text-transform: uppercase;
   margin-bottom: 300px;
+
+  text-transform: uppercase;
 }
 
 @media (min-width: @tablet-width) {
   .promo {
     min-height: 850px; // временно
-    color: @blacky;
     padding-left: 90px;
+
     text-align: left;
-    background-image: url("/img/index-can-tablet@1x.jpg");
-    background-size: 709px 609px;
+    color: @blacky;
+
+    background-image: none;
   }
 
   .promo__wrapper {
-    width: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
   .promo__title {
+    order: 1;
+    width: 500px;
     color: @blacky;
   }
 
+  .promo__image {
+    margin: 0 auto;
+    margin-top: -50px;
+    order: 4;
+  }
+
   .promo__slogan {
+    order: 2;
+    margin-bottom: 48px;
+
     font-size: 20px;
     line-height: 20px;
-    margin-bottom: 48px;
   }
 
   .promo__link {
+    order: 3;
     width: 245px;
+    padding: 14px 25px;
+
     font-size: 20px;
     line-height: 20px;
-    padding: 14px 25px;
+    z-index: 1;
   }
 }
 
 @media (min-width: @desktop-width) {
   .promo {
     min-height: 600px;
+    margin-bottom: 80px;
     padding-left: 80px;
-    background-image:
-    url("/img/index-can-desktop@1x.png"),
-    url("/img/index-background-desktop@1x.jpg");
-    background-repeat: no-repeat, no-repeat;
-    background-size: 552px 499px, 720px 696px;
-    background-position: center 30px, right -300px;
-    overflow: visible;
+    padding-top: 140px;
+    background-image: url("/img/index-background-desktop@1x.jpg");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 720px 696px;
   }
+
+  .promo__image {
+    margin-left: auto;
+    margin-top: -200px; //временно
+  }
+
 }

@@ -1,3 +1,20 @@
+.advantages {
+  counter-reset: advantage;
+}
+
 .advantages__list {
   .list-reset();
+}
+
+@media (min-width: @tablet-width) {
+ .advantages__list {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: flex-start;
+ }
+
+ .advantages__title {
+   margin-bottom: 65px;
+ }
 }

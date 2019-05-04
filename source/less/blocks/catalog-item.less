@@ -1,14 +1,31 @@
 .catalog-item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   padding-bottom: 20px;
 
   border-bottom: @lightgreyborder;
 }
 
 .catalog-item__title {
+  width: 50%;
+  margin-right: -50%;
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
   font-family: @Oswald;
   color: @blacky;
   text-transform: uppercase;
+}
+
+.catalog-item__link {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.catalog-item__table {
+  width: 50%;
+  align-self: flex-end;
 }

@@ -1,20 +1,35 @@
 .before-after {
-  font-family: @Oswald;
+  display: flex;
+  flex-direction: column;
 
-  background-color: @grey;
+  font-family: @Oswald;
 }
 
-.before-after__promo,
-.stats-item__type {
+.before-after__top,
+.before-after__slider {
+  background-color: darken(@lightgrey, 3%);
+}
+
+.before-after__title {
+  margin-bottom: 30px;
+
+  .header-reset();
+}
+
+.before-after__stats,
+.before-after__title,
+.before-after__promo {
+  padding: 0 20px;
+}
+
+.before-after__promo {
   font-family: "Arial", sans-serif;
 }
 
-
-.stats-item__amount {
-  font-weight: normal;
-  font-size: 24px;
-  color: @blacky;
-  text-transform: uppercase;
+.before-after__stats {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .before-after__label {
@@ -26,4 +41,36 @@
 
 .before-after__cost {
   text-transform: uppercase;
+}
+
+.before-after__slider-list {
+  .list-reset();
+  margin: 0 auto;
+}
+
+@media(min-width: @tablet-width) {
+  .before-after__top {
+    background-color: white;
+  }
+
+  .before-after__title,
+  .before-after__promo,
+  .before-after__stats {
+    padding: 0 30px;
+  }
+
+  .before-after__slider-list {
+    margin-top: -100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .before-after__stats {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .before-after__slider {
+    padding-bottom: 70px;
+  }
 }

@@ -22,8 +22,12 @@
 }
 
 @media (min-width: @tablet-width) {
+  .page-header {
+    margin-bottom: 55px;
+  }
+
   .page-header__wrapper {
-    width: auto;
+    width: 100%;
     justify-content: space-between;
     flex-direction: row;
     padding: 0 30px;
@@ -45,9 +49,9 @@
 }
 
 @media (min-width: @desktop-width) {
-  .page-header {
+  .page-header--index {
+    width: 100%;
     padding-top: 50px;
+    position: absolute;
   }
-
-
 }
