@@ -8,10 +8,10 @@
 }
 
 .stats__item {
-  display: flex;
-  flex-direction: column;
   position: relative;
 
+  display: flex;
+  flex-direction: column;
   width: 120px;
   margin-right: 40px;
   margin-bottom: 20px;
@@ -33,15 +33,15 @@
 .stats__type {
   position: absolute;
   top: 44px;
-  display: block;
   z-index: 1;
 
+  display: block;
+  align-self: center;
   padding: 0 7px;
 
   font-size: 12px;
   line-height: 12px;
-  font-family: "Arial", "sans-serif";
-  align-self: center;
+  font-family: "Arial", sans-serif;
 
   background-color: darken(@lightgrey, 3%);
 }
@@ -53,14 +53,14 @@
   text-transform: uppercase;
 }
 
-@media(min-width: @tablet-width) {
+@media (min-width: @tablet-width) {
   .stats {
     margin-bottom: 250px;
   }
 
   .stats__list {
-    width: 50%;
     justify-content: flex-start;
+    width: 50%;
   }
 
   .stats__item {
@@ -69,19 +69,23 @@
   }
 
   .stats__amount {
-    font-size: 30px;
     padding: 20px 0;
+
+    font-size: 30px;
   }
 
   .stats__type {
     top: 58px;
+
     font-size: 14px;
     line-height: 14px;
+
     background-color: white;
   }
 
   .stats__cost {
     width: 20%;
+
     text-align: right;
   }
 }

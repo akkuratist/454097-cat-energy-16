@@ -36,50 +36,58 @@
     </div>
   </header>
   <main class="page-main">
-    <h1 class="section-title">Подбор программы</h1>
-    <p class="section-description">Заполните анкету и мы подберем программу питания для вашего кота</p>
     <section class="food-programm-form">
+      <section class="food-programm-form__header">
+        <h1 class="section-title food-programm-form__title">Подбор программы</h1>
+        <p class="section-description food-programm-form__description">Заполните анкету и мы подберем программу питания
+          для вашего кота</p>
+      </section>
       <form class="main-form" action="https://echo.htmlacademy.ru" method="POST">
-        <fieldset class="main-form__fieldset cats-info">
-          <label class="main-form__label">Имя:<sup>*</sup>
-            <input class="main-form__text-input" type="text" name="cats-name" placeholder="Барсик" required>
-          </label>
-          <label class="main-form__label">Вес (кг):<sup>*</sup>
-            <input class="main-form__text-input" type="text" name="cats-weight" placeholder="7" required>
-          </label>
-          <label class="main-form__label">Возраст (лет)
-            <input class="main-form__text-input" type="text" name="cats-age" placeholder="7">
-          </label>
-        </fieldset>
-        <fieldset class="main-form__fieldset main-form__fieldset--wanted-program">
-          <ul class="form-list">
-            <li class="form-list__item">
-              <label for="lose-weight" class="main-form__label label-radio">Похудение</label>
-              <input type="radio" name="program" id="lose-weight" class="visually-hidden main-form__radio"
-                value="lose-weight">
-            </li>
-            <li class="form-list__item">
-              <label for="lose-weight" class="main-form__label label-radio">Набор массы</label>
-              <input type="radio" name="program" id="get-mass" class="visually-hidden main-form__radio"
-                value="get-mass">
-            </li>
-            <li class="form-list__item">
-              <label for="lose-weight" class="main-form__label label-radio">Не знаю (нужен ваш совет)</label>
-              <input type="radio" name="program" id="help-me-choose" class="visually-hidden main-form__radio"
-                value="help me choose">
-            </li>
-          </ul>
-        </fieldset>
+        <div class="main-form__fieldset-group">
+          <fieldset class="main-form__fieldset main-form__fieldset--cats-info">
+            <label class="main-form__label">Имя:*
+              <input class="main-form__text-input" type="text" name="cats-name" placeholder="Барсик" required>
+            </label>
+            <label class="main-form__label">Вес (кг):*
+              <input class="main-form__text-input" type="text" name="cats-weight" placeholder="7" required>
+            </label>
+            <label class="main-form__label">Возраст (лет)
+              <input class="main-form__text-input" type="text" name="cats-age" placeholder="7">
+            </label>
+          </fieldset>
+          <fieldset class="main-form__fieldset main-form__fieldset--wanted-program">
+            <ul class="form-list">
+              <li class="form-list__item">
+                <input type="radio" name="program" id="lose-weight" class="visually-hidden main-form__radio"
+                  value="lose-weight">
+                <label for="lose-weight" class="main-form__label main-form__label--radio">Похудение</label>
+              </li>
+              <li class="form-list__item">
+                <input type="radio" name="program" id="get-mass" class="visually-hidden main-form__radio"
+                  value="get-mass">
+                <label for="get-mass" class="main-form__label main-form__label--radio">Набор массы</label>
+              </li>
+              <li class="form-list__item">
+                <input type="radio" name="program" id="help-me-choose" class="visually-hidden main-form__radio"
+                  value="help me choose">
+                <label for="help-me-choose" class="main-form__label main-form__label--radio">Не знаю (нужен ваш
+                  совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
         <fieldset class="main-form__fieldset main-form--owner-contacts">
           <legend class="sub-section-title main-form__legend">Контактные данные (владельца кота)</legend>
-          <label class="main-form__label">E-mail:<sup>*</sup>
-            <input class="main-form__text-input main-form__text-input--email" type="email" name="owners-email"
-              placeholder="kuklachev@gmail.com" required>
-          </label>
-          <label class="main-form__label">Телефон:<sup>*</sup>
-            <input class="main-form__text-input main-form__text-input--phone" type="tel" name="owners-phone"
-              placeholder="8 (960) 900-60-90" required>
-          </label>
+          <div class="main-form__fieldset-wrapper main-form__fieldset-wrapper--owner-contacts">
+            <label class="main-form__label">E-mail:*
+              <input class="main-form__text-input main-form__text-input--email" type="email" name="owners-email"
+                placeholder="kuklachev@gmail.com" required>
+            </label>
+            <label class="main-form__label">Телефон:*
+              <input class="main-form__text-input main-form__text-input--phone" type="tel" name="owners-phone"
+                placeholder="8 (960) 900-60-90" required>
+            </label>
+          </div>
         </fieldset>
         <fieldset class="main-form__fieldset main-form__fieldset--commentary">
           <legend class="sub-section-title main-form__legend">Комментарий</legend>
@@ -88,26 +96,30 @@
         </fieldset>
         <fieldset class="main-form__fieldset main-form__fieldset--extra">
           <legend class="sub-section-title main-form__legend">Дополнительно</legend>
-          <ul class="form-list">
-            <li class="form-list__item">
-              <label class="main-form__label" for="sweetener">Сахарозаменитель</label>
+          <ul class="form-list form-list--extra">
+            <li class="form-list__item form-list__item--extra">
+              <label class="main-form__label main-form__label--checkbox" for="sweetener">Сахарозаменитель</label>
               <input type="checkbox" class="visually-hidden" name="sweetener" id="sweetener" checked>
             </li>
-            <li class="form-list__item">
-              <label class="main-form__label" for="drink-water">Питьевая вода</label>
+            <li class="form-list__item form-list__item--extra">
+              <label class="main-form__label main-form__label--checkbox" for="drink-water">Питьевая вода</label>
               <input type="checkbox" class="visually-hidden" name="drink-water" id="drink-water">
             </li>
-            <li class="form-list__item">
-              <label class="main-form__label" for="milk">Молоко</label>
+            <li class="form-list__item form-list__item--extra">
+              <label class="main-form__label main-form__label--checkbox" for="milk">Молоко</label>
               <input type="checkbox" class="visually-hidden" name="milk" id="milk">
             </li>
-            <li class="form-list__item">
-              <label class="main-form__label" for="vitamins">Витамины</label>
+            <li class="form-list__item form-list__item--extra">
+              <label class="main-form__label main-form__label--checkbox" for="vitamins">Витамины</label>
               <input type="checkbox" class="visually-hidden" name="vitamins" id="vitamins">
           </ul>
         </fieldset>
-        <button type="submit" class="button main-form__button">Отправить заявку</button>
-        <p class="main-form__instruction"> <sup>*</sup> — Обязательные поля </p>
+        <fieldset class="main-form__fieldset">
+          <div class="main-form__fieldset-wrapper--submit">
+            <button type="submit" class="button main-form__button">Отправить заявку</button>
+            <p class="main-form__instruction">* — Обязательные поля</p>
+          </div>
+        </fieldset>
       </form>
     </section>
     <section class="contacts">

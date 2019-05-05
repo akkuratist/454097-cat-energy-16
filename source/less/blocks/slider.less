@@ -7,8 +7,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  .list-reset();
   margin: 0 auto;
+
+  .list-reset();
 }
 
 .slider__label {
@@ -41,5 +42,14 @@
     line-height: 25px;
 
     border-bottom: 1px dotted #b8b8b8;
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid #989898;
+    }
+
+    &:active {
+      border-bottom: 0;
+    }
   }
 }

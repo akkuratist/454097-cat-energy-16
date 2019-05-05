@@ -3,7 +3,7 @@
 
   color: @blacky;
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     top: 0;
@@ -59,7 +59,7 @@
     padding-left: 0;
 
     &::after {
-      content: ""counter(advantage)"";
+      content: ""counter(advantage) "";
       position: absolute;
       top: 85px;
       left: 140px;
@@ -78,5 +78,4 @@
   .advantage-item {
     width: 25%;
   }
-
 }

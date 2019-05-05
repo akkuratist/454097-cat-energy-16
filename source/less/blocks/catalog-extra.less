@@ -1,3 +1,31 @@
 .catalog-extra {
   color: @blacky;
 }
+
+.catalog-extra__title {
+  margin-left: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-extra__title {
+    margin-bottom: 80px;
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-extra {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .catalog-extra__title {
+    margin-left: 40px;
+  }
+
+  .catalog-list--extra {
+    width: 73%;
+  }
+}

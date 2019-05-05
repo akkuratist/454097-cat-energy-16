@@ -43,6 +43,7 @@
 
   .promo__wrapper {
     position: relative;
+
     display: flex;
     flex-direction: column;
   }
@@ -50,13 +51,14 @@
   .promo__title {
     order: 1;
     width: 500px;
+
     color: @blacky;
   }
 
   .promo__image {
+    order: 4;
     margin: 0 auto;
     margin-top: -50px;
-    order: 4;
   }
 
   .promo__slogan {
@@ -68,13 +70,14 @@
   }
 
   .promo__link {
+    z-index: 1;
+
     order: 3;
     width: 245px;
     padding: 14px 25px;
 
     font-size: 20px;
     line-height: 20px;
-    z-index: 1;
   }
 }
 
@@ -82,17 +85,17 @@
   .promo {
     min-height: 600px;
     margin-bottom: 80px;
-    padding-left: 80px;
     padding-top: 140px;
+    padding-left: 80px;
+
     background-image: url("/img/index-background-desktop@1x.jpg");
-    background-position: right top;
     background-repeat: no-repeat;
+    background-position: right top;
     background-size: 720px 696px;
   }
 
   .promo__image {
-    margin-left: auto;
     margin-top: -200px; //временно
+    margin-left: auto;
   }
-
 }

@@ -7,8 +7,9 @@
 }
 
 .site-list__link {
-  color: @blacky;
   display: block;
+
+  color: @blacky;
 
   &:hover,
   &:focus {
@@ -26,22 +27,22 @@
 
 @media (min-width: @tablet-width) {
   .site-list {
-    width: 500px;
     display: flex;
+    flex-grow: 1;
     flex-direction: row;
     justify-content: flex-end;
-    flex-grow: 1;
+    width: 500px;
   }
 
   .site-list__item:not(:last-of-type) {
     margin-right: 40px;
   }
-
 }
 
 @media (min-width: @desktop-width) {
   .site-list__link--index {
     color: white;
+
     border-bottom-color: white;
   }
 }

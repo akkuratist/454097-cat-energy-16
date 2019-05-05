@@ -1,15 +1,16 @@
 .page-header__wrapper {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .page-header__top-bar {
-  padding: 0px 20px;
-  min-height: 65px; //времянка
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  min-height: 65px; //времянка
+  padding: 0 20px;
+
   border-bottom: @lightgreyborder;
 }
 
@@ -27,9 +28,9 @@
   }
 
   .page-header__wrapper {
-    width: 100%;
-    justify-content: space-between;
     flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
     padding: 0 30px;
   }
 
@@ -43,15 +44,16 @@
 
   .page-header__top-bar {
     width: 230px;
+
     border: 0;
   }
-
 }
 
 @media (min-width: @desktop-width) {
   .page-header--index {
+    position: absolute;
+
     width: 100%;
     padding-top: 50px;
-    position: absolute;
   }
 }
