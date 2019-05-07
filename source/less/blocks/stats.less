@@ -54,10 +54,6 @@
 }
 
 @media (min-width: @tablet-width) {
-  .stats {
-    margin-bottom: 250px;
-  }
-
   .stats__list {
     justify-content: flex-start;
     width: 50%;
@@ -85,7 +81,31 @@
 
   .stats__cost {
     width: 20%;
+    display: block;
+    font-size: 20px;
 
     text-align: right;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .stats__list {
+    width: 100%;
+  }
+
+  .stats__cost {
+    display: flex;
+    justify-content: space-between;
+    width: 325px;
+    text-align: left;
+  }
+
+  .stats__cost-amount {
+    display: block;
+    text-align: right;
+  }
+
+  .stats__type {
+    background-color: #eaeaea;
   }
 }

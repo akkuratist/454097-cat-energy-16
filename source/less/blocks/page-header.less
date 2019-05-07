@@ -5,22 +5,15 @@
 }
 
 .page-header__top-bar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  min-height: 65px; //времянка
-  padding: 0 20px;
-
+  min-height: 65px;
   border-bottom: @lightgreyborder;
 }
 
 .page-header__logo {
-  width: 230px;
+  width: 75%;
+  padding-left: 20px;
 }
 
-.page-header__menu-toggle {
-  width: 50px;
-}
 
 @media (min-width: @tablet-width) {
   .page-header {
@@ -28,14 +21,10 @@
   }
 
   .page-header__wrapper {
+    padding: 0 30px;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    padding: 0 30px;
-  }
-
-  .page-header__menu-toggle {
-    display: none;
   }
 
   .page-header__logo {
@@ -50,6 +39,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .page-header__wrapper {
+    padding: 0 40px;
+  }
+
   .page-header--index {
     position: absolute;
 

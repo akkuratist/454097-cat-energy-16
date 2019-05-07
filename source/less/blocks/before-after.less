@@ -7,13 +7,13 @@
 
 .before-after__top,
 .before-after__slider {
-  background-color: darken(@lightgrey, 3%);
+  background-color: #eaeaea;
 }
 
 .before-after__title {
+
   margin-bottom: 30px;
 
-  .header-reset();
 }
 
 .before-after__stats,
@@ -50,6 +50,11 @@
 }
 
 @media (min-width: @tablet-width) {
+  .before-after {
+    border-top: @lightgreyborder;
+    padding-top: 50px;
+  }
+
   .before-after__top {
     background-color: white;
   }
@@ -69,9 +74,62 @@
   .before-after__stats {
     flex-wrap: nowrap;
     justify-content: space-between;
+    margin-bottom: 250px;
   }
 
   .before-after__slider {
     padding-bottom: 70px;
   }
+}
+
+@media (min-width: @desktop-width) {
+  .before-after {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 0;
+    padding-bottom: 20px;
+    border: none;
+    background-color: #eaeaea;
+
+  }
+
+  .before-after__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 47%;
+    margin-right: 3%;
+    background-color: #eaeaea;
+  }
+
+  .before-after__title,
+  .before-after__promo,
+  .before-after__stats {
+    padding-left: 40px;
+    padding-right: 0;
+
+  }
+
+  .before-after__title {
+    margin-bottom: 150px;
+    margin-top: -150px;
+  }
+
+  .before-after__slider-list {
+    width: 50%;
+    margin-top: -130px;
+  }
+
+  .before-after__promo {
+    width: 75%;
+    margin-bottom: 70px;
+  }
+
+  .before-after__stats {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+
 }

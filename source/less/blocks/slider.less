@@ -8,8 +8,9 @@
   flex-direction: row;
   justify-content: space-between;
   margin: 0 auto;
+  padding: 0 20px;
+  list-style: none;
 
-  .list-reset();
 }
 
 .slider__label {
@@ -51,5 +52,11 @@
     &:active {
       border-bottom: 0;
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider-toggles {
+    padding: 0 40px;
   }
 }

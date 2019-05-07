@@ -43,9 +43,7 @@
 @media (min-width: @tablet-width) {
   .advantage-item {
     width: 50%;
-    margin-right: 0;
-    margin-bottom: 100px;
-    margin-left: 0;
+    margin: 50px 0;
 
     &::before {
       width: 80px;
@@ -55,16 +53,17 @@
 
   .advantage-item__description {
     width: 245px;
-    padding-top: 100px;
+    padding-top: 95px;
     padding-left: 0;
 
     &::after {
       content: ""counter(advantage) "";
       position: absolute;
-      top: 85px;
-      left: 140px;
+      top: -40px;
+      left: 115px;
 
       font-size: 281px;
+      line-height: 281px;
       font-family: @Oswald;
       color: @lightgrey;
 
