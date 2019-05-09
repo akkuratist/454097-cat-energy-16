@@ -1,30 +1,9 @@
 .main-nav {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 20px;
   font-family: @Oswald;
   text-align: center;
   text-transform: uppercase;
-
-  .main-nav__toggle:hover,
-  .main-nav__toggle:focus {
-    opacity: 0.6;
-  }
-
-  .main-nav__toggle:active {
-    opacity: 0.3;
-  }
-}
-
-.main-nav__toggle {
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  width: 80px;
-  height: 63px;
-
-  background-color: white;
-  border: 0;
 }
 
 .main-nav--closed .site-list {
@@ -36,52 +15,9 @@
   display: block;
 }
 
-.main-nav--nojs .main-nav__toggle {
-  display: none;
-}
-
-.main-nav--closed .main-nav__toggle::before {
-  content: "";
-  position: absolute;
-  top: 31px;
-  left: 36px;
-
-  display: block;
-  width: 24px;
-  height: 2px;
-
-  background-color: #222222;
-  box-shadow:
-    0 8px 0 0 #222222,
-    0 -8px 0 0 #222222;
-}
-
-.main-nav--opened .main-nav__toggle {
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 32px;
-    left: 28px;
-
-    display: block;
-    width: 24px;
-    height: 2px;
-
-    background-color: #222222;
-  }
-
-  &::before {
-    transform: rotate(45deg);
-  }
-
-  &::after {
-    transform: rotate(-45deg);
-  }
-}
-
 @media (min-width: @tablet-width) {
   .main-nav {
+    font-weight: 400;
     font-size: 18px;
     line-height: 24px;
     text-align: left;
