@@ -6,6 +6,32 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link href="css/style.css" rel="stylesheet">
+    <!-- Pixel Glass -->
+<style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    /* Mobile layout by default */
+    background-image: url( "img/preview/catalog-320.jpg" );
+  }
+  /* Tablet */
+  @media ( min-width: 768px ) {
+    HTML {
+      /* Tablet layout */
+      background-image: url("img/preview/catalog-768.jpg");
+    }
+  }
+  /* Desktop */
+  @media ( min-width: 1300px ) {
+    HTML {
+      /* Desktop layout */
+      background-image: url( "img/preview/catalog-1300.jpg" );
+    }
+  }
+</style>
+<link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+<script src="../node_modules/pixel-glass/script.js"></script>
+<!-- // Pixel Glass -->
 </head>
 
 <body>
@@ -38,7 +64,7 @@
   <main class="page-main catalog-main">
     <h1 class="section-title catalog__title">Каталог продукции</h1>
     <section class="catalog">
-      <a name="pro"></a>
+      <a id="pro"></a>
       <ul class="catalog-list">
         <li class="catalog-item">
           <a href="#" class="catalog-item__link">
@@ -137,7 +163,7 @@
           <a class="button catalog-item__button" href="#">Заказать</a>
         </li>
         <li class="catalog-item">
-          <a name="slim"></a>
+          <a id="slim"></a>
           <a href="#" class="catalog-item__link">
             <img class="catalog-item__image catalog-item__image--small" src="img/buckwheat-small-mobile@1x.jpg"
               width="140" height="144" alt="Ведерко Кэт энерджи слим c гречкой, 500 грамм">
@@ -265,14 +291,14 @@
         <section class="catalog-gift">
           <img class="catalog-gift__icon" src="img/icon-gift.svg" width="55" height="60">
           <p class="catalog-gift__text">
-            Закажите все и&nbspполучите чехол для кота в подарок!
+            Закажите все и&nbsp;получите чехол для кота в подарок!
           </p>
         </section>
       </section>
     </section>
     <section class="contacts">
       <section class="contacts__text">
-        <h2 class="contacts__title">Приглашаем к&nbspсотрудничеству дилеров!</h2>
+        <h2 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
         <p class="contacts__address">
           ул. Большая<br> Конюшенная, д. 19/8
           <span class="contacts__city">Санкт-Петербург
@@ -290,9 +316,10 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper wrapper">
       <a class="page-footer__logo" href="index.html">
-        <img class="logo__text" src="img/logo-footer.svg" width="100" height="20">
+        <img class="logo__text" src="img/logo-footer.svg" width="100" height="20" alt="Логотип кэт энерджи">
       </a>
       <section class="page-footer__social social">
+        <h2 class="visually-hidden">Наши социальные сети</h2>
         <ul class="social-list">
           <li class="social-item">
             <a class="social__link social__link--vk" href="#">Вконтакте</a>
@@ -313,7 +340,7 @@
       </section>
     </div>
   </footer>
-  <script src="js/main-nav.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -5,15 +5,18 @@
   font-family: @Oswald;
 }
 
+.before-after__top {
+  margin-bottom: 25px;
+}
+
 .before-after__top,
 .before-after__slider {
-  background-color: #eaeaea;
+  background-color: @lightgrey;
 }
 
 .before-after__title {
-
-  margin-bottom: 30px;
-
+  margin-top: 17px;
+  margin-bottom: 22px;
 }
 
 .before-after__stats,
@@ -23,6 +26,8 @@
 }
 
 .before-after__promo {
+  margin-bottom: 26px;
+  padding-right: 30px;
   font-family: "Arial", sans-serif;
 }
 
@@ -46,7 +51,8 @@
 .before-after__slider-list {
   margin: 0 auto;
 
-  .list-reset();
+  padding: 0;
+  list-style: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -84,14 +90,13 @@
 
 @media (min-width: @desktop-width) {
   .before-after {
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: flex-start;
     padding-top: 0;
     padding-bottom: 20px;
     border: none;
-    background-color: #eaeaea;
-
+    background-color: @lightgrey;
   }
 
   .before-after__top {
@@ -100,7 +105,7 @@
     justify-content: flex-start;
     width: 47%;
     margin-right: 3%;
-    background-color: #eaeaea;
+    background-color: @lightgrey;
   }
 
   .before-after__title,
@@ -108,7 +113,6 @@
   .before-after__stats {
     padding-left: 40px;
     padding-right: 0;
-
   }
 
   .before-after__title {
@@ -131,5 +135,4 @@
     flex-wrap: wrap;
     margin-bottom: 50px;
   }
-
 }

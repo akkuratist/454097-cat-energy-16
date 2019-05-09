@@ -6,6 +6,34 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link href="css/style.css" rel="stylesheet">
+  <!-- Pixel Glass -->
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* Mobile layout by default */
+      background-image: url("img/preview/form-320.jpg");
+    }
+
+    /* Tablet */
+    @media (min-width: 768px) {
+      HTML {
+        /* Tablet layout */
+        background-image: url("img/preview/form-768.jpg");
+      }
+    }
+
+    /* Desktop */
+    @media (min-width: 1300px) {
+      HTML {
+        /* Desktop layout */
+        background-image: url("img/preview/form-1300.jpg");
+      }
+    }
+  </style>
+  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+  <script src="../node_modules/pixel-glass/script.js"></script>
+  <!-- // Pixel Glass -->
 </head>
 
 <body>
@@ -46,10 +74,12 @@
         <div class="main-form__fieldset-group">
           <fieldset class="main-form__fieldset main-form__fieldset--cats-info">
             <label class="main-form__label">Имя:*
-              <input class="main-form__text-input" type="text" name="cats-name" placeholder="Барсик" required pattern="^[A-Za-zА-Яа-яЁё]+$">
+              <input class="main-form__text-input" type="text" name="cats-name" placeholder="Барсик" required
+                pattern="^[A-Za-zА-Яа-яЁё]+$">
             </label>
             <label class="main-form__label">Вес (кг):*
-              <input class="main-form__text-input" type="text" name="cats-weight" placeholder="7" required pattern="[0-9]+(\.[0-9]+|,[0-9]+)?">
+              <input class="main-form__text-input" type="text" name="cats-weight" placeholder="7" required
+                pattern="[0-9]+(\.[0-9]+|,[0-9]+)?">
             </label>
             <label class="main-form__label">Возраст (лет)
               <input class="main-form__text-input" type="text" name="cats-age" placeholder="7">
@@ -59,7 +89,7 @@
             <ul class="form-list">
               <li class="form-list__item">
                 <input type="radio" name="program" id="lose-weight" class="visually-hidden main-form__radio"
-                  value="lose-weight">
+                  value="lose-weight" checked>
                 <label for="lose-weight" class="main-form__label main-form__label--radio">Похудение</label>
               </li>
               <li class="form-list__item">
@@ -114,17 +144,15 @@
               <input type="checkbox" class="visually-hidden" name="vitamins" id="vitamins">
           </ul>
         </fieldset>
-        <fieldset class="main-form__fieldset">
-          <div class="main-form__fieldset-wrapper--submit">
-            <button type="submit" class="button main-form__button">Отправить заявку</button>
-            <p class="main-form__instruction">* — Обязательные поля</p>
-          </div>
-        </fieldset>
+        <div class="main-form__submit">
+          <button type="submit" class="button main-form__button">Отправить заявку</button>
+          <p class="main-form__instruction">* — Обязательные поля</p>
+        </div>
       </form>
     </section>
     <section class="contacts">
       <section class="contacts__text">
-        <h2 class="contacts__title">Приглашаем к&nbspсотрудничеству дилеров!</h2>
+        <h2 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
         <p class="contacts__address">
           ул. Большая<br> Конюшенная, д. 19/8
           <span class="contacts__city">Санкт-Петербург
@@ -142,9 +170,10 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper wrapper">
       <a class="page-footer__logo" href="index.html">
-        <img class="logo__text" src="img/logo-footer.svg" width="100" height="20">
+        <img class="logo__text" src="img/logo-footer.svg" width="100" height="20" alt="Логотип кэт энерджи">
       </a>
       <section class="page-footer__social social">
+        <h2 class="visually-hidden">Наши социальные сети</h2>
         <ul class="social-list">
           <li class="social-item">
             <a class="social__link social__link--vk" href="#">Вконтакте</a>
@@ -165,7 +194,7 @@
       </section>
     </div>
   </footer>
-  <script src="js/main-nav.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

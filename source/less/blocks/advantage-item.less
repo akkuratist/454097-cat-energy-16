@@ -1,12 +1,12 @@
 .advantage-item {
   position: relative;
 
-  color: @blacky;
+  min-height: 60px;
 
   &::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -1px;
     left: 0;
 
     display: block;
@@ -36,7 +36,7 @@
 }
 
 .advantage-item__description {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding-left: 80px;
 }
 
@@ -61,6 +61,7 @@
       position: absolute;
       top: -40px;
       left: 115px;
+      z-index: -1;
 
       font-size: 281px;
       line-height: 281px;
@@ -68,7 +69,6 @@
       color: @lightgrey;
 
       counter-increment: advantage;
-      z-index: -1;
     }
   }
 }
