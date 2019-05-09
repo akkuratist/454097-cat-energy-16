@@ -1,8 +1,39 @@
 .categories-item {
-  background-color: @grey;
+  position: relative;
+
+  padding: 20px;
+
+  background-color: @lightgrey;
 }
 
+.categories-item__logo {
+  position: absolute;
+
+  width: 50px;
+  height: 50px;
+
+  background-color: @green;
+  border-radius: 50%;
+
+  &-image--slim {
+    position: absolute;
+    top: -5px;
+    left: 9px;
+  }
+
+  &-image--pro {
+    position: absolute;
+    top: 10px;
+    left: -9px;
+  }
+}
+
+
 .categories__title {
+  margin-top: 10px;
+  margin-bottom: 29px;
+  padding-left: 70px;
+
   font-weight: normal;
   font-size: 24px;
   line-height: 37px;
@@ -10,13 +41,126 @@
   text-transform: uppercase;
 }
 
+.categories__description {
+  margin-bottom: 22px;
+}
+
 .categories__link {
+  display: block;
+  padding-top: 20px;
+
   font-size: 16px;
+  line-height: 16px;
   font-family: @Oswald;
   color: @blacky;
   text-transform: uppercase;
 
+  border-top: @greyborder;
+
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .categories-item {
+    margin-bottom: 30px;
+    padding-top: 75px;
+    padding-bottom: 60px;
+    padding-left: 50px;
+  }
+
+  .categories-item__logo {
+    top: 75px;
+    right: 250px;
+
+    width: 200px;
+    height: 200px;
+
+    &-image--slim {
+      top: -20px;
+      left: 20px;
+
+      width: 145px;
+      height: 194px;
+    }
+
+    &-image--pro {
+      top: 40px;
+      left: -37px;
+
+      width: 267px;
+      height: 111px;
+    }
+  }
+
+  .categories__title {
+    margin-bottom: 20px;
+
+    font-size: 36px;
+    text-align: left;
+  }
+
+  .categories__description {
+    margin-bottom: 60px;
+  }
+
+  .categories-item--pro .categories__description {
+    width: 340px;
+  }
+
+  .categories-item--slim .categories__description {
+    width: 370px;
+  }
+
+  .categories__link {
+    font-size: 20px;
+    line-height: 20px;
+
+    border: 0;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .categories-item {
+    width: 47%;
+    padding: 50px;
+    padding-bottom: 60px;
+  }
+
+  .categories-item__logo {
+    top: 45px;
+    left: 50px;
+
+    width: 100px;
+    height: 100px;
+
+    &-image--slim {
+      top: -10px;
+      left: 10px;
+
+      width: 73px;
+      height: 97px;
+    }
+
+    &-image--pro {
+      top: 20px;
+      left: -18px;
+
+      width: 134px;
+      height: 56px;
+    }
+  }
+
+  .categories__title {
+    margin-bottom: 75px;
+
+    text-align: center;
+  }
+
+
+  .categories__description {
+    width: 100%;
   }
 }

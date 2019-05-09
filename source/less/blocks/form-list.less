@@ -1,3 +1,23 @@
 .form-list {
   .list-reset();
 }
+
+@media (min-width: @tablet-width) {
+  .form-list--extra {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .form-list__item--extra {
+    width: 47%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-list__item--extra {
+    width: 19%;
+    margin-right: 6%;
+  }
+}

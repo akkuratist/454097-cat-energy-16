@@ -1,32 +1,39 @@
 .main-nav {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 20px;
   font-family: @Oswald;
   text-align: center;
   text-transform: uppercase;
 }
 
-.site-list {
-  .list-reset();
+.main-nav--closed .site-list {
+  display: none;
 }
 
-.site-list__item {
-  padding: 20px 0;
+.main-nav--opened .site-list,
+.main-nav--nojs .site-list {
+  display: block;
 }
 
-.site-list__link {
-  color: @blacky;
+@media (min-width: @tablet-width) {
+  .main-nav {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav .site-list {
+    display: flex;
+  }
 }
 
-.site-list__link:hover,
-.site-list__link:focus {
-  color: rgba(17, 17, 17, 0.6);
-}
-
-.site-list__link:active {
-  color: rgba(17, 17, 17, 0.3);
-}
-
-.site-list__link--active {
-  border-bottom: 2px solid @green;
+@media (min-width: @desktop-width) {
+  .main-nav {
+    font-size: 20px;
+  }
 }

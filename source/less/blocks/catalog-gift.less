@@ -1,8 +1,58 @@
 .catalog-gift {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  min-height: 290px;
+
   font-size: 16px;
   line-height: 20px;
   color: white;
 
   background-image: url("../../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-size: 100% 289px;
+}
+
+.catalog-gift__text {
+  width: 50%;
+
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-gift {
+    flex-direction: row;
+    min-height: 200px;
+
+    background-image: url("/img/gift-photo-tablet@1x.jpg");
+    background-size: cover;
+  }
+
+  .catalog-gift__text {
+    width: 25%;
+
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-gift {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20.1%;
+    min-height: 289px;
+    padding-top: 64px;
+    padding-bottom: 45px;
+
+    background-image: url("/img/gift-photo-desktop@1x.jpg");
+    background-size: cover;
+  }
+
+  .catalog-gift__text {
+    width: 170px;
+
+    text-align: center;
+  }
 }

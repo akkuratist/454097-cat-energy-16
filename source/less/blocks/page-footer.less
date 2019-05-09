@@ -1,5 +1,22 @@
 .page-footer {
   padding-top: 38px;
 
-  background-color: @grey;
+  background-color: @lightgrey;
+}
+
+.page-footer__social {
+  padding: 22px 0;
+}
+
+.page-footer__logo {
+  width: 150px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 60px 0;
+  }
 }

@@ -1,7 +1,45 @@
 .sub-section-title {
+  position: relative;
+
+  display: inline-block;
+  max-width: 70%;
+  padding-right: 23px;
+
   font-weight: normal;
   font-size: 24px;
   line-height: 24px;
   font-family: @Oswald;
   color: @blacky;
+
+  background-color: white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+
+    display: block;
+    width: calc(100vw - 40px);
+    height: 3px;
+
+    background-color: @green;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .sub-section-title {
+    padding: 0 40px;
+
+    font-size: 36px;
+    line-height: 36px;
+
+    &::after {
+      top: 70%;
+      left: -65px;
+
+      width: calc(100vw - 12px);
+    }
+  }
 }

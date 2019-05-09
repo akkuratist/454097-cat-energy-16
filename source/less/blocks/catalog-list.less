@@ -1,4 +1,32 @@
 .catalog-list {
-  .list-reset();
   border-top: @lightgreyborder;
+
+  .list-reset();
+}
+
+
+@media (min-width: @tablet-width) {
+  .catalog-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    border-top: 0;
+  }
+
+  .catalog-list--extra {
+    flex-direction: column;
+  }
+
+  .catalog-item {
+    margin: 0 30px;
+    margin-top: 140px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-item {
+    margin: 0 3%;
+    margin-top: 140px;
+  }
 }

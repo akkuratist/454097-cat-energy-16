@@ -1,20 +1,41 @@
 .before-after {
-  font-family: @Oswald;
+  display: flex;
+  flex-direction: column;
 
-  background-color: @grey;
+  font-family: @Oswald;
+  background-color: @lightgrey;
 }
 
-.before-after__promo,
-.stats-item__type {
+.before-after__top {
+  margin-bottom: 25px;
+}
+
+.before-after__top,
+.before-after__slider {
+  background-color: @lightgrey;
+}
+
+.before-after__title {
+  margin-top: 17px;
+  margin-bottom: 22px;
+}
+
+.before-after__stats,
+.before-after__title,
+.before-after__promo {
+  padding: 0 20px;
+}
+
+.before-after__promo {
+  margin-bottom: 26px;
+  padding-right: 30px;
   font-family: "Arial", sans-serif;
 }
 
-
-.stats-item__amount {
-  font-weight: normal;
-  font-size: 24px;
-  color: @blacky;
-  text-transform: uppercase;
+.before-after__stats {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .before-after__label {
@@ -26,4 +47,93 @@
 
 .before-after__cost {
   text-transform: uppercase;
+}
+
+.before-after__slider-list {
+  margin: 0 auto;
+
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: @tablet-width) {
+  .before-after {
+    border-top: @lightgreyborder;
+    padding-top: 50px;
+  }
+
+  .before-after__top {
+    background-color: white;
+  }
+
+  .before-after__title,
+  .before-after__promo,
+  .before-after__stats {
+    padding: 0 30px;
+  }
+
+  .before-after__slider-list {
+    margin-top: -100px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .before-after__stats {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 250px;
+  }
+
+  .before-after__slider {
+    padding-bottom: 70px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .before-after {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 0;
+    padding-bottom: 20px;
+    border: none;
+    background-color: @lightgrey;
+  }
+
+  .before-after__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 47%;
+    margin-right: 3%;
+    background-color: @lightgrey;
+  }
+
+  .before-after__title,
+  .before-after__promo,
+  .before-after__stats {
+    padding-left: 40px;
+    padding-right: 0;
+  }
+
+  .before-after__title {
+    margin-bottom: 150px;
+    margin-top: -150px;
+  }
+
+  .before-after__slider-list {
+    width: 50%;
+    margin-top: -130px;
+  }
+
+  .before-after__promo {
+    width: 75%;
+    margin-bottom: 70px;
+  }
+
+  .before-after__stats {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
 }
