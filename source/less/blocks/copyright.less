@@ -1,7 +1,21 @@
 .copyright {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+}
+
+.copyright__link {
+  svg {
+    fill: #666666;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: @green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {

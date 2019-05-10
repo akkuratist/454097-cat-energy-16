@@ -86,6 +86,10 @@
     margin-bottom: 55px;
   }
 
+  .page-header__menu-toggle {
+    display: none;
+  }
+
   .page-header__wrapper {
     flex-direction: row;
     justify-content: space-between;
@@ -95,6 +99,11 @@
 
   .page-header__logo {
     width: 230px;
+
+    img {
+      width: 173px;
+      height: 58px;
+    }
   }
 
   .page-header__top-bar {
@@ -107,6 +116,11 @@
 @media (min-width: @desktop-width) {
   .page-header__wrapper {
     padding: 0 40px;
+  }
+
+  .page-header__logo img {
+    width: 202px;
+    height: 59px;
   }
 
   .page-header--index {

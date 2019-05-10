@@ -9,6 +9,10 @@
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 100% auto;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("/img/index-background-mobile@2x.jpg");
+  }
 }
 
 .promo__link {
@@ -32,7 +36,6 @@
 
 @media (min-width: @tablet-width) {
   .promo {
-    min-height: 850px; // временно
     padding-left: 90px;
 
     text-align: left;
@@ -44,14 +47,11 @@
 
   .promo__wrapper {
     position: relative;
-
-    display: flex;
-    flex-direction: column;
   }
 
   .promo__title {
-    order: 1;
     width: 500px;
+    margin-bottom: 45px;
 
     font-size: 60px;
     line-height: 60px;
@@ -59,14 +59,20 @@
     color: @blacky;
   }
 
+  .promo__picture {
+    position: absolute;
+    top: 200px;
+    left: -60px;
+    z-index: -1;
+  }
+
   .promo__image {
-    order: 4;
-    margin: 0 auto;
-    margin-top: -50px;
+
+    width: 709px;
+    height: 609px;
   }
 
   .promo__slogan {
-    order: 2;
     margin-bottom: 48px;
 
     font-size: 20px;
@@ -76,8 +82,8 @@
   .promo__link {
     z-index: 1;
 
-    order: 3;
     width: 245px;
+    margin-bottom: 530px;
     padding: 14px 25px;
 
     font-size: 20px;
@@ -96,10 +102,20 @@
     background-repeat: no-repeat;
     background-position: right top;
     background-size: 720px 696px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("/img/index-background-desktop@2x.jpg");
+    }
+  }
+
+  .promo__picture {
+    margin-left: 0;
+    z-index: 0;
   }
 
   .promo__image {
-    margin-top: -200px; //временно
-    margin-left: auto;
+    width: 552px;
+    height: 499px;
+    margin-top: 20%; //временно
   }
 }
