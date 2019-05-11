@@ -1,10 +1,24 @@
 .copyright {
-  display: flex;
-  justify-content: space-between;
+  padding-top: 11px;
+
+  border-top: @lightgreyborder;
 }
 
 .copyright__link {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 16px;
+  line-height: 16px;
+  color: inherit;
+
   svg {
+    position: absolute;
+    top: -10px;
+    right: -5px;
+
     fill: #666666;
   }
 
@@ -19,11 +33,13 @@
 }
 
 @media (min-width: @tablet-width) {
-  justify-content: flex-end;
-}
+  .copyright__link {
+    justify-content: flex-end;
+  }
 
-.copyright__link {
-  font-size: 16px;
-  line-height: 16px;
-  color: @lightblack;
+  .copyright__link {
+    font-size: 16px;
+    line-height: 16px;
+    color: @lightblack;
+  }
 }

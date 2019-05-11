@@ -2,12 +2,15 @@
   position: relative;
 
   padding: 20px;
+  padding-bottom: 19px;
 
   background-color: @lightgrey;
 }
 
 .categories-item__logo {
   position: absolute;
+  top: 25px;
+  left: 25px;
 
   width: 50px;
   height: 50px;
@@ -15,10 +18,15 @@
   background-color: @green;
   border-radius: 50%;
 
+  &--pro {
+    top: 23px;
+    left: 23px;
+  }
+
   &-image--slim {
     position: absolute;
     top: -5px;
-    left: 9px;
+    left: 10px;
   }
 
   &-image--pro {
@@ -32,7 +40,7 @@
 .categories__title {
   margin-top: 10px;
   margin-bottom: 29px;
-  padding-left: 70px;
+  padding-left: 71px;
 
   font-weight: normal;
   font-size: 24px;
@@ -42,11 +50,12 @@
 }
 
 .categories__description {
-  margin-bottom: 22px;
+  margin-bottom: 21px;
 }
 
 .categories__link {
   position: relative;
+
   display: inline-block;
   padding-top: 20px;
 
@@ -67,9 +76,11 @@
     position: absolute;
     top: 60%;
     right: -36px;
+
     display: block;
     width: 24px;
     height: 11px;
+
     background-image: url("/img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
     background-size: 24px 11px;
@@ -78,7 +89,9 @@
   &:hover::after,
   &:active::after {
     right: -34px;
+
     width: 36px;
+
     background-image: url("/img/icon-right-arrow-verylong.svg");
     background-size: 36px 11px;
   }
@@ -150,7 +163,6 @@
       right: -48px;
     }
   }
-
 }
 
 

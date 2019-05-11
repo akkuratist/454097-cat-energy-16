@@ -1,3 +1,44 @@
-.social-item {
-  margin-right: 20px;
+.social__link {
+  position: relative;
+
+  display: block;
+  width: 25px;
+
+  svg {
+    fill: #666666;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: @green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--fb svg {
+    position: relative;
+    top: -2px;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .social__link {
+    &--vk svg {
+      width: 30px;
+      height: 16px;
+    }
+
+    &--inst svg {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--fb svg {
+      width: 14px;
+      height: 27px;
+    }
+  }
 }
