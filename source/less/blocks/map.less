@@ -1,20 +1,37 @@
 .map {
   max-width: 100%;
-  min-height: 400px;
+  min-height: 362px;
 
   background-image: url("/img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
-  background-size: 100% 400px;
+  background-position: 0 -42px;
+  background-size: cover;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("/img/bg-map-mobile@2x.png");
+  }
 }
 
 @media (min-width: @tablet-width) {
   .map {
     background-image: url("/img/bg-map-tablet@1x.png");
+    background-position: 0 -4px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("/img/bg-map-tablet@2x.png");
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .map {
+    min-height: 400px;
     background-image: url("/img/bg-map-desktop@1x.png");
+    background-size: initial;
+    background-position: -70px 0;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("/img/bg-map-desktop@2x.png");
+    }
   }
 }

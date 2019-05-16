@@ -16,22 +16,39 @@
     background-color: @green;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 50px 50px;
   }
 
   &--healthy::before {
     background-image: url("/img/advantage-leaf@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("/img/advantage-leaf@2x.png");
+    }
   }
 
   &--powder::before {
     background-image: url("/img/advantage-powder@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("/img/advantage-powder@2x.png");
+    }
   }
 
   &--dining::before {
     background-image: url("/img/advantage-dining@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("/img/advantage-dining@2x.png");
+    }
   }
 
   &--watch-changes::before {
     background-image: url("/img/advantage-clock@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("/img/advantage-clock@2x.png");
+    }
   }
 }
 
@@ -42,8 +59,8 @@
 
 @media (min-width: @tablet-width) {
   .advantage-item {
-    width: 50%;
-    margin: 50px 0;
+    width: 45.7%;
+    margin: 57px 0;
 
     &::before {
       width: 80px;
@@ -75,6 +92,13 @@
 
 @media (min-width: @desktop-width) {
   .advantage-item {
-    width: 25%;
+    width: 245px;
+    padding-right: 0;
+
+    margin-right: 80px;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
   }
 }

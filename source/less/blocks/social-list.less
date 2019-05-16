@@ -1,7 +1,23 @@
 .social-list {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
 
   .list-reset();
+
+  margin-left: 73px;
+  padding-top: 3px;
+}
+
+.social-item {
+  margin-right: 33px;
+}
+
+@media (min-width: @tablet-width) {
+  .social-list {
+    margin-left: 63px;
+  }
+
+  .social-item {
+    margin-right: 26px;
+  }
 }

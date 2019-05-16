@@ -17,6 +17,7 @@
 }
 
 .main-form__label {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -27,6 +28,44 @@
   font-family: @Oswald;
   color: #222222;
   text-transform: uppercase;
+
+  svg {
+    position: absolute;
+    right: 20px;
+    fill: #222222;
+  }
+
+  &--radio::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    z-index: 1;
+
+    display: none;
+    width: 10px;
+    height: 10px;
+
+    background-color: @green;
+    border-radius: 50%;
+  }
+
+  &--radio::before,
+  &--checkbox::before {
+    content: "";
+    position: absolute;
+    left: 0;
+
+    display: block;
+    width: 30px;
+    height: 30px;
+
+    background-color: white;
+    border: 1px solid #e2e2e2;
+  }
+
+  &--radio::before {
+    border-radius: 50%;
+  }
 }
 
 .main-form__label--radio,
@@ -41,38 +80,15 @@
   }
 }
 
-.main-form__label--radio {
-  &::before {
-    content: "";
-    position: absolute;
-    left: 9px;
-    z-index: 1;
-
-    display: none;
-    width: 12px;
-    height: 12px;
-
-    background-color: @green;
-    border-radius: 50%;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-
-    display: block;
-    width: 30px;
-    height: 30px;
-
-    background-color: white;
-    border: 1px solid #e2e2e2;
-    border-radius: 50%;
-  }
+.main-form__radio:checked ~ .main-form__label--radio::after {
+  display: block;
 }
 
-.main-form__radio:checked ~ .main-form__label--radio::before {
-  display: block;
+.main-form__checkbox:checked ~ .main-form__label--checkbox::before {
+  background-image: url("/img/icon-tick.svg");
+  background-size: 21px 16px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .main-form__legend {
@@ -110,6 +126,14 @@
   &:not(:placeholder-shown):required:invalid:focus {
     border-color: #ff8282;
   }
+
+  &:focus + svg {
+    fill: @green;
+  }
+
+  &:not(:placeholder-shown):required:invalid:focus + svg {
+    fill: #ff8282;
+  }
 }
 
 .main-form__textarea {
@@ -136,8 +160,13 @@
   }
 }
 
+.main-form__submit {
+  margin-bottom: 35px;
+}
+
 .main-form__button {
-  border: 0;
+  border: none;
+  margin-bottom: 20px;
 }
 
 .main-form__instruction {
@@ -172,23 +201,21 @@
   }
 
   .main-form__label {
-    margin-bottom: 20px;
+    padding-left: 65px;
+    margin-bottom: 30px;
     font-size: 20px;
     line-height: 20px;
-  }
 
-  .main-form__label--radio {
-    padding-left: 65px;
-
-    &::before {
+    &--radio::after {
       left: 11px;
       width: 18px;
       height: 18px;
     }
 
-    &::after {
-      width: 39px;
-      height: 39px;
+    &--radio::before,
+    &--checkbox::before {
+      width: 40px;
+      height: 40px;
     }
   }
 

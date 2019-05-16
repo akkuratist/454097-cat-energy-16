@@ -3,11 +3,12 @@
   flex-direction: column;
 
   font-family: @Oswald;
+
   background-color: @lightgrey;
 }
 
 .before-after__top {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .before-after__top,
@@ -29,12 +30,12 @@
 .before-after__promo {
   margin-bottom: 26px;
   padding-right: 30px;
+
   font-family: "Arial", sans-serif;
 }
 
 .before-after__stats {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
 }
 
@@ -51,19 +52,32 @@
 
 .before-after__slider-list {
   margin: 0 auto;
-
   padding: 0;
+
   list-style: none;
 }
 
 @media (min-width: @tablet-width) {
   .before-after {
+    padding-top: 43px;
+
+    background-color: white;
     border-top: @lightgreyborder;
-    padding-top: 50px;
   }
 
   .before-after__top {
+    margin-bottom: 0;
+
     background-color: white;
+  }
+
+  .before-after__title {
+    margin-top: 0;
+    margin-bottom: 64px;
+  }
+
+  .before-after__promo {
+    margin-bottom: 53px;
   }
 
   .before-after__title,
@@ -73,19 +87,22 @@
   }
 
   .before-after__slider-list {
-    margin-top: -100px;
+    margin-top: -169px;
     margin-right: auto;
     margin-left: auto;
+    padding-left: 10px;
   }
 
   .before-after__stats {
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin-bottom: 250px;
+    margin-bottom: 235px;
   }
 
   .before-after__slider {
     padding-bottom: 70px;
+
+    background-color: @lightgrey;
   }
 }
 
@@ -95,45 +112,54 @@
     flex-direction: row;
     justify-content: flex-start;
     padding-top: 0;
-    padding-bottom: 20px;
-    border: none;
+    padding-bottom: 0;
+
     background-color: @lightgrey;
+    border: none;
   }
 
   .before-after__top {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 47%;
-    margin-right: 3%;
+    width: 570px;
+    margin-right: 40px;
+
     background-color: @lightgrey;
   }
 
   .before-after__title,
   .before-after__promo,
   .before-after__stats {
-    padding-left: 40px;
     padding-right: 0;
+    padding-left: 40px;
   }
 
   .before-after__title {
-    margin-bottom: 150px;
-    margin-top: -150px;
+    margin-top: -171px;
+    margin-bottom: 130px;
+  }
+
+  .before-after__slider {
+    padding-bottom: 70px;
   }
 
   .before-after__slider-list {
-    width: 50%;
-    margin-top: -130px;
+    width: 690px;
+    height: 600px;
+    margin: 0;
+    margin-top: -227px;
+    padding-left: 0;
   }
 
   .before-after__promo {
-    width: 75%;
-    margin-bottom: 70px;
+    width: 474px;
+    margin-bottom: 68px;
   }
 
   .before-after__stats {
-    justify-content: flex-start;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    justify-content: flex-start;
+    margin-bottom: 70px;
   }
 }
