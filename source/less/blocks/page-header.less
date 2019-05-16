@@ -1,3 +1,10 @@
+@media (max-width: @mobile-width-only) {
+  .page-header {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+}
+
 .page-header__wrapper {
   display: flex;
   flex-direction: column;
@@ -83,7 +90,8 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
-    margin-bottom: 55px;
+    padding-top: 22px;
+    margin-bottom: 25px;
   }
 
   .page-header__menu-toggle {
@@ -98,8 +106,7 @@
   }
 
   .page-header__logo {
-    width: 230px;
-
+    padding-left: 0;
     img {
       width: 173px;
       height: 58px;
@@ -107,7 +114,9 @@
   }
 
   .page-header__top-bar {
-    width: 230px;
+    display: block;
+    width: 25%;
+    padding: 0;
 
     border: 0;
   }
@@ -127,6 +136,6 @@
     position: absolute;
 
     width: 100%;
-    padding-top: 50px;
+    padding-top: 53px;
   }
 }

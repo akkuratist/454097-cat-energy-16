@@ -1,5 +1,6 @@
 .advantages {
   counter-reset: advantage;
+
 }
 
 .advantages__list {
@@ -9,26 +10,34 @@
 }
 
 .advantages__title {
-  margin-top: -3px;
+  margin-top: 0;
   margin-bottom: 29px;
 }
 
 
 @media (min-width: @tablet-width) {
+  .advantages {
+    padding-top: 13px;
+  }
+
   .advantages__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-bottom: 50px;
+    justify-content: space-between;
+    margin-bottom: 25px;
   }
 
   .advantages__title {
-    margin-bottom: 15px;
+    margin-bottom: 17px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .advantages__list {
     margin-bottom: 220px;
+  }
+
+  .advantages__title {
+    margin-bottom: 16px;
   }
 }

@@ -1,6 +1,4 @@
 .copyright {
-  padding-top: 11px;
-
   border-top: @lightgreyborder;
 }
 
@@ -12,7 +10,7 @@
 
   font-size: 16px;
   line-height: 16px;
-  color: inherit;
+  color: @lightblack;
 
   svg {
     position: absolute;
@@ -33,10 +31,16 @@
 }
 
 @media (min-width: @tablet-width) {
+
   .copyright__link {
-    justify-content: flex-end;
+    justify-content: flex-start;
+    margin-right: 50px;
     font-size: 16px;
     line-height: 16px;
-    color: @lightblack;
+
+    svg {
+      right: -56px;
+      top: -11px;
+    }
   }
 }

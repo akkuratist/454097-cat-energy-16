@@ -10,6 +10,7 @@
   background-repeat: no-repeat;
   background-size: 100% auto;
 
+
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("/img/index-background-mobile@2x.jpg");
   }
@@ -34,9 +35,15 @@
   text-transform: uppercase;
 }
 
+@media (min-width: 450px) and (max-width: @mobile-width-only) {
+  .promo {
+    background-size: 100% 90%;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .promo {
-    padding-left: 90px;
+    padding-left: 88px;
 
     text-align: left;
     color: @blacky;
@@ -51,7 +58,7 @@
 
   .promo__title {
     width: 500px;
-    margin-bottom: 45px;
+    margin-bottom: 41px;
 
     font-size: 60px;
     line-height: 60px;
@@ -73,7 +80,7 @@
   }
 
   .promo__slogan {
-    margin-bottom: 48px;
+    margin-bottom: 49px;
 
     font-size: 20px;
     line-height: 20px;
@@ -84,7 +91,7 @@
 
     width: 245px;
     margin-bottom: 530px;
-    padding: 14px 25px;
+    padding: 15px 25px;
 
     font-size: 20px;
     line-height: 20px;
@@ -93,14 +100,14 @@
 
 @media (min-width: @desktop-width) {
   .promo {
-    min-height: 600px;
+    min-height: 696px;
     margin-bottom: 80px;
-    padding-top: 140px;
+    padding-top: 223px;
     padding-left: 80px;
 
     background-image: url("/img/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;
-    background-position: right top;
+    background-position: 650px 0;
     background-size: 720px 696px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -109,13 +116,23 @@
   }
 
   .promo__picture {
-    margin-left: 0;
+    left: 410px;
+    top: -81px;
     z-index: 0;
   }
 
   .promo__image {
     width: 552px;
     height: 499px;
-    margin-top: 20%; //временно
+  }
+
+  .promo__slogan {
+    margin-bottom: 52px;
+  }
+
+  .promo__link {
+    margin-bottom: 76px;
+    padding-top: 14px;
+    padding-left: 24px;
   }
 }

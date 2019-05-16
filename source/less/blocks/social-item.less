@@ -5,6 +5,7 @@
   width: 25px;
 
   svg {
+    position: relative;
     fill: #666666;
   }
 
@@ -18,7 +19,6 @@
   }
 
   &--fb svg {
-    position: relative;
     top: -2px;
   }
 }
@@ -26,17 +26,21 @@
 
 @media (min-width: @tablet-width) {
   .social__link {
+    width: 30px;
+
     &--vk svg {
       width: 30px;
       height: 16px;
     }
 
     &--inst svg {
+      top: -2px;
       width: 23px;
       height: 23px;
     }
 
     &--fb svg {
+      top: -4px;
       width: 14px;
       height: 27px;
     }
