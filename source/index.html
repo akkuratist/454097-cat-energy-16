@@ -6,8 +6,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link href="css/style.css" rel="stylesheet">
+  <script>
+    document.createElement("picture");
+  </script>
+  <script src="js/picturefill-min.js" async></script>
   <!-- Pixel Glass -->
-  <!-- <style>
+  <style>
     HTML {
       opacity: 0.4;
       background-repeat: no-repeat;
@@ -31,7 +35,7 @@
         background-image: url("img/preview/index-1300.jpg");
       }
     }
-  </style> -->
+  </style>
 
   <!-- Pixel Glass -->
   <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
@@ -39,6 +43,9 @@
 </head>
 
 <body>
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
   <header class="page-header page-header--index">
     <div class="page-header__wrapper">
       <section class="page-header__top-bar">
@@ -207,7 +214,7 @@
       </section>
 
     </section>
-    <section class="contacts">
+    <section class="contacts contacts--index">
       <h2 class="visually-hidden">Наши контакты</h2>
       <section class="contacts__text">
         <h2 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
