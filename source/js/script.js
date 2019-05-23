@@ -20,3 +20,10 @@ menuToggle.addEventListener('click', function () {
     menuToggle.classList.remove('page-header__menu-toggle--opened');
   }
 });
+
+function initMap() {
+  var catEnergyLocation = {lat: 59.9387, lng: 30.3231};
+  var map = new google.maps.Map(
+      document.getElementById('catEnergyMap'), {zoom: 18, center: catEnergyLocation});
+  var marker = new google.maps.Marker({position: catEnergyLocation, map: map});
+}

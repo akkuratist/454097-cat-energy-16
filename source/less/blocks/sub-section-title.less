@@ -1,8 +1,6 @@
 .sub-section-title {
   position: relative;
 
-  display: inline-block;
-  max-width: 80%;
   padding-right: 23px;
 
   font-weight: normal;
@@ -11,35 +9,39 @@
   font-family: @Oswald;
   color: @blacky;
 
-  background-color: white;
-
   &::after {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 14px;
     left: 0;
     z-index: -1;
 
     display: block;
-    width: calc(100vw - 40px);
+    width: 100vw;
     height: 3px;
 
     background-color: @green;
   }
 }
 
+.sub-section-title__content {
+  display: inline-block;
+  padding-right: 23px;
+
+  background-color: white;
+}
+
 @media (min-width: @tablet-width) {
   .sub-section-title {
-    padding: 0 40px;
-
     font-size: 36px;
     line-height: 36px;
 
     &::after {
-      top: 70%;
-      left: -65px;
-
-      width: calc(100vw - 12px);
+      top: 22px;
     }
+  }
+
+  .sub-section-title__content {
+    padding: 0 37px;
   }
 }

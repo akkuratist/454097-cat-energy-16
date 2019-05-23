@@ -1,12 +1,9 @@
 .social-list {
+  .list-reset();
   display: flex;
   justify-content: flex-start;
-
-  .list-reset();
-
-
-  margin-left: 72px;
   padding-top: 3px;
+  padding-left: calc(50% - 67px);
 }
 
 .social-item {
@@ -15,8 +12,7 @@
 
 @media (min-width: @tablet-width) {
   .social-list {
-    margin: 0 auto;
-    margin-left: 63px;
+    padding-left: calc(50% - 53px);
   }
 
   .social-item {

@@ -1,11 +1,18 @@
 .catalog-extra__title {
-  margin-left: 20px;
+  margin-bottom: 33px;
 }
 
 @media (min-width: @tablet-width) {
   .catalog-extra__title {
     margin-bottom: 80px;
+  }
+
+  .catalog-extra__title .sub-section-title__content {
     margin-left: 30px;
+  }
+
+  .catalog-extra__table {
+    padding: 0 20px;
   }
 }
 
@@ -15,17 +22,20 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
+    max-width: 1300px;
+    margin: 0 auto;
   }
 
   .catalog-extra__title {
-    margin-left: 40px;
+    width: 100%;
   }
 
-  .catalog-list--extra {
-    width: 73%;
+  .catalog-extra__title .sub-section-title__content {
+    margin-left: -40px;
+    padding-left: 40px;
   }
 
-  .catalog-gift {
-    margin-left: 6.5%;
+  .catalog-extra__title::after {
+    width: 100%;
   }
 }

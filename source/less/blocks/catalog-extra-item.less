@@ -1,30 +1,31 @@
 .catalog-extra-item {
-  padding-bottom: 17px;
   padding-top: 12px;
+  padding-bottom: 17px;
 
-  border-bottom: @greyborder;
-}
-
-.catalog-extra-item:first-child {
-  border-top: @lightgreyborder;
+  border: @greyborder;
+  border-top: none;
 }
 
 .catalog-extra-item__title {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
   font-family: @Oswald;
+  text-align: left;
   color: @blacky;
   text-transform: uppercase;
-  text-align: left;
 }
 
 .catalog-extra-item__table {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 12px;
+  width: 100%;
+  margin-bottom: 10px;
+
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .catalog-extra-item__table tr {
@@ -34,7 +35,8 @@
 
 @media (min-width: @tablet-width) {
   .catalog-extra-item {
-    padding: 27px 37px;
+    padding: 25px 36px;
+    padding-bottom: 0;
   }
 
   .catalog-extra-item__title {
@@ -44,10 +46,12 @@
   .catalog-extra-item__table {
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 18px;
+    padding: 0;
   }
 
   .catalog-extra-item__table tr {
-    width: 300px;
+    width: 260px;
   }
 
   .catalog-extra-item__volume {
@@ -62,27 +66,45 @@
   .catalog-extra-item__cost {
     text-align: right;
   }
+
+  .catalog-extra-item__button {
+    margin-bottom: 26px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .catalog-extra-item {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
+    width: 895px;
     padding: 15px 0;
+
+    border-right: none;
+    border-left: none;
   }
 
   .catalog-extra-item__table {
-    width: 68%;
+    width: 610px;
+    margin-right: 40px;
     margin-bottom: 0;
+
+    tr {
+      justify-content: flex-start;
+      width: 285px;
+    }
   }
 
   .catalog-extra-item__title {
-    width: 305px;
+    width: 285px;
+    margin-right: 40px;
+    margin-bottom: 0;
   }
 
   .catalog-extra-item__button {
-    width: 27%;
+    width: 245px;
+    margin: 0;
   }
 
   .catalog-extra-item__volume {

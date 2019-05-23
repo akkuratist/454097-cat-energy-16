@@ -4,6 +4,7 @@
 
 .site-list__item {
   padding: 20px 0;
+
   border-bottom: @lightgreyborder;
 }
 
@@ -27,7 +28,6 @@
   .site-list {
     display: flex;
     flex-grow: 1;
-
     justify-content: flex-end;
   }
 
@@ -40,15 +40,18 @@
   }
 
   .site-list__link {
-    display: inline-block;
     position: relative;
+
+    display: inline-block;
 
     &--active::before {
       content: "";
       position: absolute;
       top: 32px;
+
       width: 100%;
       height: 2px;
+
       background-color: @green;
     }
   }
