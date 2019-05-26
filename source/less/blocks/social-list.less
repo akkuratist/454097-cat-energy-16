@@ -1,6 +1,7 @@
 .social-list {
   .list-reset();
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   padding-top: 3px;
   padding-left: calc(50% - 67px);
@@ -12,8 +13,9 @@
 
 @media (min-width: @tablet-width) {
   .social-list {
-    padding-left: calc(50% - 53px);
+    width: 300px;
     padding-top: 0;
+    padding-left: calc(50% - 53px);
   }
 
   .social-item {

@@ -28,6 +28,7 @@
   .site-list {
     display: flex;
     flex-grow: 1;
+    flex-wrap: wrap;
     justify-content: flex-end;
   }
 
@@ -36,7 +37,7 @@
   }
 
   .site-list__item:not(:last-of-type) {
-    margin-right: 36px;
+    margin-right: 35px;
   }
 
   .site-list__link {
@@ -60,6 +61,10 @@
 @media (min-width: @desktop-width) {
   .site-list__link--index {
     color: white;
+  }
+
+  .site-list__item:not(:last-of-type) {
+    margin-right: 34px;
   }
 
   .site-list__link--index .site-list__link--active::after {

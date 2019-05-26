@@ -45,21 +45,22 @@
   color: #222222;
   text-transform: uppercase;
 
-  &--radio::after {
+  &--radio::before {
     content: "";
     position: absolute;
     left: 10px;
     z-index: 1;
 
-    display: none;
+    display: block;
     width: 10px;
     height: 10px;
 
-    background-color: @green;
+    background-color: white;
     border-radius: 50%;
+    box-shadow: 0 0 0 10px white,
+      0 0 0 11px #e2e2e2;
   }
 
-  &--radio::before,
   &--checkbox::before {
     content: "";
     position: absolute;
@@ -71,10 +72,6 @@
 
     background-color: white;
     border: 1px solid #e2e2e2;
-  }
-
-  &--radio::before {
-    border-radius: 50%;
   }
 }
 
@@ -97,8 +94,14 @@
   }
 }
 
-.main-form__radio:checked ~ .main-form__label--radio::after {
-  display: block;
+.main-form__radio:checked ~ .main-form__label--radio::before {
+  background-color: @green;
+}
+
+.main-form__radio:disabled ~ .main-form__label--radio::before,
+.main-form__checkbox:disabled ~ .main-form__label--checkbox::before {
+  border-color: #ff8282;
+  opacity: 0.2;
 }
 
 .main-form__checkbox:checked ~ .main-form__label--checkbox::before {
@@ -140,7 +143,7 @@
     border-color: @lightblack;
   }
 
-  &:not(:placeholder-shown):required:invalid:focus {
+  &:invalid {
     border-color: #ff8282;
   }
 
@@ -148,7 +151,7 @@
     fill: @green;
   }
 
-  &:not(:placeholder-shown):required:invalid:focus + svg {
+  &:invalid svg {
     fill: #ff8282;
   }
 }
@@ -277,23 +280,18 @@
     }
 
     &--radio::before {
-      left: -59px;
-    }
-
-    &--radio::after {
       left: -48px;
 
       width: 18px;
       height: 18px;
+
+      box-shadow: 0 0 0 10px white,
+        0 0 0 11px #e2e2e2;
     }
 
-    &--radio::before,
     &--checkbox::before {
       width: 40px;
       height: 40px;
-    }
-
-    &--checkbox::before {
       left: -11px;
     }
   }
@@ -414,6 +412,21 @@
 
     &::before {
       left: 0;
+    }
+  }
+
+  .main-form__input-icon {
+    right: 20px;
+  }
+
+  .main-form__text-input {
+    &--email {
+      margin-left: 20px;
+    }
+
+    &--phone {
+      margin-left: 16px;
+      padding-left: 17px;
     }
   }
 

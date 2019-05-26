@@ -10,6 +10,7 @@
   font-size: 16px;
   line-height: 20px;
   color: white;
+
   background-color: @green;
   background-image: url("/img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -37,14 +38,14 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 768px;
+    width: calc(100% - 60px);
     min-height: 200px;
     margin: 0 auto;
     padding: 0 30px;
 
     background-image: url("/img/gift-photo-tablet@1x.jpg");
     background-position-x: center;
-    background-size: contain;
+    background-size: cover;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("/img/gift-photo-tablet@2x.jpg");
@@ -71,10 +72,11 @@
     align-items: center;
     width: 245px;
     min-height: 289px;
-    padding-top: 31px;
-    padding-bottom: 45px;
+    padding-top: 30px;
+    padding-bottom: 26px;
 
     background-image: url("/img/gift-photo-desktop@1x.jpg");
+    background-size: cover;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("/img/gift-photo-desktop@2x.jpg");
