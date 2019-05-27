@@ -11,22 +11,32 @@
     flex-direction: row;
     flex-wrap: wrap;
 
-    border-top: 0;
+    border-top: none;
   }
 
   .catalog-list--extra {
     flex-direction: column;
+    padding: 0 30px;
   }
 
   .catalog-item {
     margin: 0 30px;
-    margin-top: 140px;
+    margin-top: 141px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .catalog-list {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .catalog-list--extra {
+    padding: 0;
+  }
+
   .catalog-item {
-    margin: 0 3%;
+    margin: 0 40px;
     margin-top: 140px;
   }
 }

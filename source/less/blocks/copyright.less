@@ -11,17 +11,18 @@
   font-size: 16px;
   line-height: 16px;
   color: @lightblack;
+}
 
-  svg {
-    position: absolute;
-    top: -10px;
-    right: -5px;
+.copyright__logo {
+  position: absolute;
+  top: -12px;
+  right: -7px;
 
-    fill: #666666;
-  }
+  fill: #666666;
 
-  &:hover svg,
-  &:focus svg {
+
+  &:hover,
+  &:focus {
     fill: @green;
   }
 
@@ -31,15 +32,20 @@
 }
 
 @media (min-width: @tablet-width) {
+  .copyright {
+    border-top: none;
+  }
+
   .copyright__link {
     justify-content: flex-start;
     margin-right: 50px;
+
     font-size: 16px;
     line-height: 16px;
+  }
 
-    svg {
-      right: -56px;
-      top: -11px;
-    }
+  .copyright__logo {
+    top: -11px;
+    right: -56px;
   }
 }

@@ -2,8 +2,8 @@
   font-weight: 400;
   font-family: "Oswald";
 
-  src:
-    url("../fonts/oswaldregular.woff2") format("woff2"),
+  font-display: swap;
+  src:  url("../fonts/oswaldregular.woff2") format("woff2"),
     url("../fonts/oswaldregular.woff") format("woff");
 }
 
@@ -11,9 +11,9 @@
   font-weight: 600;
   font-family: "Oswald";
 
-  src:
-    url("../fonts/oswaldmedium.woff") format("woff"),
-    url("../fonts/oswaldmedium.woff2") format("woff2");
+  font-display: swap;
+  src:  url("../fonts/oswaldmedium.woff2") format("woff2"),
+    url("../fonts/oswaldmedium.woff") format("woff");
 }
 
 
@@ -46,7 +46,6 @@
 @import "blocks/page-footer.less";
 @import "blocks/page-header.less";
 @import "blocks/page-main.less";
-@import "blocks/plus.less";
 @import "blocks/promo.less";
 @import "blocks/site-logo.less";
 @import "blocks/site-list.less";

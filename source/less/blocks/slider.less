@@ -4,7 +4,7 @@
 }
 
 .slider__list {
-  margin-bottom: 16px;
+  margin-bottom: 30px;
 }
 
 .slider__item--after {
@@ -13,26 +13,24 @@
 
 .slider__toggles {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  width: 70%;
-  margin-left: 20%;
-  padding: 0;
+  justify-content: space-between;
+  width: 232px;
+  margin: 0 auto;
+  margin-bottom: 13px;
+  padding: 0 20px;
 
   list-style: none;
 }
 
 .slider__toggle {
-  margin-right: 8%;
+  margin-right: 18px;
 }
 
 .slider__label {
-
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
 }
-
 
 .slider__toggle--before {
   order: 1;
@@ -50,7 +48,7 @@
   position: relative;
   top: 2px;
 
-  width: 82px;
+  width: 84px;
   height: 14px;
 
   background-color: white;
@@ -62,15 +60,15 @@
   position: absolute;
   top: 3px;
   z-index: 1;
-  display: block;
-  cursor: pointer;
 
+  display: block;
   width: 36px;
   height: 6px;
 
   background-color: transparent;
   border: none;
   border-radius: 6px;
+  cursor: pointer;
 
   &--before {
     left: 5px;
@@ -99,9 +97,10 @@
   }
 
   .slider__toggles {
+    justify-content: space-between;
     width: 570px;
     margin: 0 auto;
-    justify-content: space-between;
+    padding: 0;
   }
 
   .slider__toggle {
@@ -109,9 +108,11 @@
   }
 
   .slider__indicator {
+    top: 10px;
+
     width: 425px;
     height: 6px;
-    top: 10px;
+
     background-color: #dcdcdc;
     border: none;
   }
@@ -122,27 +123,31 @@
 
   .slider__scroller {
     position: absolute;
-    top: -14px;
+    top: -13px;
     left: calc(50% - 14px);
+    z-index: 1;
+
     display: block;
     width: 32px;
     height: 32px;
+
     background-color: white;
     border: 1px solid #cfcfcf;
     border-radius: 50%;
     box-shadow: 0 0 5px 0 #cecece;
-    z-index: 1;
 
     &::before {
       content: "";
       position: absolute;
-      left: 12px;
-      top: 12px;
+      top: 11px;
+      left: 11px;
+
       display: block;
       width: 8px;
       height: 8px;
-      border-radius: 50%;
+
       background-color: @green;
+      border-radius: 50%;
     }
   }
 
@@ -171,9 +176,11 @@
 @media (min-width: @desktop-width) {
   .slider__toggles {
     position: relative;
+
     margin: 0;
-    margin-left: 80px;
     margin-top: -45px;
+    margin-left: 80px;
+    padding: 0;
   }
 
   .slider__list {

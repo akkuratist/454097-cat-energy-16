@@ -4,6 +4,7 @@
 
 .site-list__item {
   padding: 20px 0;
+
   border-bottom: @lightgreyborder;
 }
 
@@ -27,7 +28,7 @@
   .site-list {
     display: flex;
     flex-grow: 1;
-
+    flex-wrap: wrap;
     justify-content: flex-end;
   }
 
@@ -36,19 +37,22 @@
   }
 
   .site-list__item:not(:last-of-type) {
-    margin-right: 36px;
+    margin-right: 35px;
   }
 
   .site-list__link {
-    display: inline-block;
     position: relative;
+
+    display: inline-block;
 
     &--active::before {
       content: "";
       position: absolute;
       top: 32px;
+
       width: 100%;
       height: 2px;
+
       background-color: @green;
     }
   }
@@ -57,6 +61,10 @@
 @media (min-width: @desktop-width) {
   .site-list__link--index {
     color: white;
+  }
+
+  .site-list__item:not(:last-of-type) {
+    margin-right: 34px;
   }
 
   .site-list__link--index .site-list__link--active::after {

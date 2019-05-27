@@ -3,21 +3,43 @@
 }
 
 @media (min-width: @tablet-width) {
+  .form-list {
+    padding: 34px 86px;
+    padding-bottom: 2px;
+
+    border: @lightgreyborder;
+  }
+
   .form-list--extra {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 11px;
+    padding-bottom: 0;
+
+    border: none;
   }
 
   .form-list__item--extra {
-    width: 47%;
+    width: 43.5%;
+    margin-bottom: 33px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .form-list--extra {
+    justify-content: flex-start;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
   .form-list__item--extra {
-    width: 19%;
-    margin-right: 6%;
+    width: 245px;
+    margin-right: 80px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
