@@ -8,6 +8,35 @@
   <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
   <link href="css/style-min.css" rel="stylesheet">
+
+  <!-- Pixel Glass -->
+<style>
+    HTML {
+      opacity: 0.4;
+      background-repeat: no-repeat;
+      background-position:  50% 0;
+      /* Mobile layout by default */
+      background-image: url( "../img/preview/index-320.jpg" );
+    }
+    /* Tablet */
+    @media ( min-width: 768px ) {
+      HTML {
+        /* Tablet layout */
+        background-image: url("img/preview/index-768.jpg");
+      }
+    }
+    /* Desktop */
+    @media ( min-width: 1300px ) {
+      HTML {
+        /* Desktop layout */
+        background-image: url( "img/preview/index-1300.jpg" );
+      }
+    }
+  </style>
+  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+  <script src="../node_modules/pixel-glass/script.js"></script>
+  <!-- // Pixel Glass -->
+
 </head>
 
 <body>
@@ -64,20 +93,20 @@
     <section class="categories wrapper">
       <ul class="categories__list">
         <li class="categories-item categories-item--slim">
-          <h3 class="categories__title">Похудение</h3>
-          <p class="categories__description">
+          <h3 class="categories-item__title">Похудение</h3>
+          <p class="categories-item__description">
             Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim
             поможет вашему питомцу сбросить лишний вес.
           </p>
-          <a class="categories__link" href="catalog.html#slim">Каталог slim</a>
+          <a class="categories-item__link" href="catalog.html#slim">Каталог slim</a>
         </li>
         <li class="categories-item categories-item--pro">
-          <h3 class="categories__title">Набор массы</h3>
-          <p class="categories__description">
+          <h3 class="categories-item__title">Набор массы</h3>
+          <p class="categories-item__description">
             Заработать авторитет среди дворовых котов и даже собак?
             Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
           </p>
-          <a class="categories__link" href="catalog.html#pro">Каталог pro</a>
+          <a class="categories-item__link" href="catalog.html#pro">Каталог pro</a>
         </li>
       </ul>
     </section>
@@ -107,87 +136,89 @@
       </ul>
     </section>
     <section class="before-after">
-      <div class="before-after__top">
-        <h2 class="before-after__title section-title">Живой пример</h2>
-        <p class="before-after__promo">
-          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
-          изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-        </p>
-        <section class="before-after__stats stats">
-          <h3 class="visually-hidden">Статистика</h3>
-          <ul class="stats__list">
-            <li class="stats__item">
-              <span class="stats__amount">5 кг</span>
-              <span class="stats__type">снижение веса</span>
+      <div class="before-after__wrapper">
+        <div class="before-after__top">
+          <h2 class="before-after__title section-title">Живой пример</h2>
+          <p class="before-after__promo">
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
+            изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+          </p>
+          <section class="before-after__stats stats">
+            <h3 class="visually-hidden">Статистика</h3>
+            <ul class="stats__list">
+              <li class="stats__item">
+                <span class="stats__amount">5 кг</span>
+                <span class="stats__type">снижение веса</span>
+              </li>
+              <li class="stats__item">
+                <span class="stats__amount">60 дней</span>
+                <span class="stats__type">затрачено времени</span>
+              </li>
+            </ul>
+            <p class="stats__cost">
+              Затраты на питание:
+              <span class="stats__cost-amount">15 000 руб.</span>
+            </p>
+          </section>
+        </div>
+        <section class="before-after__slider slider">
+          <h3 class="visually-hidden">Живой пример - картинки</h3>
+          <ul class="slider__toggles">
+            <li class="slider__toggle slider__toggle--before">
+              <input class="visually-hidden slider__radio slider__radio--before" type="radio" id="before-after--before"
+                name="before-after-radio">
+              <label class="slider__label" for="before-after--before" tabindex="0">Было</label>
             </li>
-            <li class="stats__item">
-              <span class="stats__amount">60 дней</span>
-              <span class="stats__type">затрачено времени</span>
+            <li class="slider__toggle slider__toggle--after">
+              <input class="visually-hidden slider__radio slider__radio--after" type="radio" id="before-after--after"
+                name="before-after-radio">
+              <label class="slider__label" for="before-after--after" tabindex="0">Стало</label>
+            </li>
+            <li class="slider__toggle slider__toggle--indicator">
+              <div class="before-after__indicator slider__indicator">
+                <button class="slider__button slider__button--before slider__button--active">
+                  <span class="visually-hidden">Показать фото "до"</span>
+                </button>
+                <button class="slider__button slider__button--after">
+                  <span class="visually-hidden">Показать фото "после"</span>
+                </button>
+                <button class="slider__scroller" aria-label="показать фото до и после"></button>
+              </div>
             </li>
           </ul>
-          <p class="stats__cost">
-            Затраты на питание:
-            <span class="stats__cost-amount">15 000 руб.</span>
-          </p>
-        </section>
-      </div>
-      <section class="before-after__slider slider">
-        <h3 class="visually-hidden">Живой пример - картинки</h3>
-        <ul class="slider__toggles">
-          <li class="slider__toggle slider__toggle--before">
-            <input class="visually-hidden slider__radio--before" type="radio" id="before-after--before"
-              name="before-after-radio">
-            <label class="slider__label" for="before-after--before" tabindex="0">Было</label>
-          </li>
-          <li class="slider__toggle slider__toggle--after">
-            <input class="visually-hidden slider__radio--after" type="radio" id="before-after--after"
-              name="before-after-radio">
-            <label class="slider__label" for="before-after--after" tabindex="0">Стало</label>
-          </li>
-          <li class="slider__toggle slider__toggle--indicator">
-            <div class="before-after__indicator slider__indicator">
-              <button class="slider__button slider__button--before slider__button--active">
-                <span class="visually-hidden">Показать фото "до"</span>
-              </button>
-              <button class="slider__button slider__button--after">
-                <span class="visually-hidden">Показать фото "после"</span>
-              </button>
-              <button class="slider__scroller" aria-label="показать фото до и после"></button>
-            </div>
-          </li>
-        </ul>
-        <ul class="before-after__slider-list slider__list">
-          <li class="before-after__item before-after__item--before slider__item--before">
-            <picture>
-              <source type=image/webp media="(min-width: 1300px)"
-                srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
-              <source type=image/webp media="(min-width: 768px)"
-                srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
-              <source type=image/webp srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+          <ul class="before-after__slider-list slider__list">
+            <li class="before-after__item before-after__item--before slider__item--before">
+              <picture>
+                <source type=image/webp media="(min-width: 1300px)"
+                  srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+                <source type=image/webp media="(min-width: 768px)"
+                  srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+                <source type=image/webp srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
 
-              <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-              <img class="slider__image slider__image--before" srcset="img/before-mobile@2x.png 2x"
-                src="img/before-mobile@1x.png" width="320" height="240"
-                alt="Кот просто огромен до начала приема Кэт энерджи слим!">
-            </picture>
-          </li>
-          <li class="before-after__item before-after__item--after slider__item--after">
-            <picture>
-              <source type=image/webp media="(min-width: 1300px)"
-                srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
-              <source type=image/webp media="(min-width: 768px)"
-                srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
-              <source type=image/webp srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
-              <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-              <img class="slider__image slider__image--after" srcset="img/after-mobile@2x.png 2x"
-                src="img/after-mobile@1x.png" width="320" height="240"
-                alt="Спустя месяц кот стройный и в отличной форме!">
-            </picture>
-          </li>
-        </ul>
-      </section>
+                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                <img class="slider__image slider__image--before" srcset="img/before-mobile@2x.png 2x"
+                  src="img/before-mobile@1x.png" width="320" height="240"
+                  alt="Кот просто огромен до начала приема Кэт энерджи слим!">
+              </picture>
+            </li>
+            <li class="before-after__item before-after__item--after slider__item--after">
+              <picture>
+                <source type=image/webp media="(min-width: 1300px)"
+                  srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+                <source type=image/webp media="(min-width: 768px)"
+                  srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
+                <source type=image/webp srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
+                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                <img class="slider__image slider__image--after" srcset="img/after-mobile@2x.png 2x"
+                  src="img/after-mobile@1x.png" width="320" height="240"
+                  alt="Спустя месяц кот стройный и в отличной форме!">
+              </picture>
+            </li>
+          </ul>
+      </div>
+    </section>
 
     </section>
     <section class="contacts contacts--index">

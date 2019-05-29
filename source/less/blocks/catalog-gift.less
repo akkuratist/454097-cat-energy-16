@@ -5,6 +5,7 @@
   align-items: center;
   width: 100%;
   min-height: 288px;
+  margin-bottom: 38px;
   padding-top: 64px;
 
   font-size: 16px;
@@ -12,12 +13,12 @@
   color: white;
 
   background-color: @green;
-  background-image: url("/img/gift-photo-mobile@1x.jpg");
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url("/img/gift-photo-mobile@2x.jpg");
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
   }
 }
 
@@ -36,30 +37,30 @@
 @media (min-width: @tablet-width) {
   .catalog-gift {
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
     width: calc(100% - 60px);
     min-height: 200px;
     margin: 0 auto;
+    margin-bottom: 75px;
     padding: 0 30px;
-
-    background-image: url("/img/gift-photo-tablet@1x.jpg");
+    padding-left: 92px;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
     background-position-x: center;
     background-size: cover;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("/img/gift-photo-tablet@2x.jpg");
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
     }
   }
 
   .catalog-gift__icon {
     margin-top: 33px;
-    margin-left: -48px;
+    margin-right: 277px;
   }
 
   .catalog-gift__text {
-    width: 25%;
-    margin-right: -33px;
+    width: 30%;
+    margin-top: 18px;
 
     text-align: left;
   }
@@ -68,29 +69,34 @@
 @media (min-width: @desktop-width) {
   .catalog-gift {
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     width: 245px;
     min-height: 289px;
+    margin-bottom: 20px;
     padding-top: 30px;
     padding-bottom: 26px;
 
-    background-image: url("/img/gift-photo-desktop@1x.jpg");
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
     background-size: cover;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("/img/gift-photo-desktop@2x.jpg");
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
     }
   }
 
   .catalog-gift__text {
     width: 170px;
-    margin-right: 0;
+    margin-top: 0;
+    margin-right: 62px;
 
     text-align: center;
   }
 
   .catalog-gift__icon {
-    margin-left: 4px;
+    margin-left: 0;
+    margin-right: 60px;
+    margin-top: 33px;
+    margin-bottom: 63px;
   }
 }

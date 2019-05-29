@@ -118,7 +118,7 @@
   }
 
   .slider__button {
-    display: none; //временно
+    display: none;
   }
 
   .slider__scroller {
@@ -134,7 +134,7 @@
     background-color: white;
     border: 1px solid #cfcfcf;
     border-radius: 50%;
-    box-shadow: 0 0 5px 0 #cecece;
+    box-shadow: 0 1px 2px 1px #cecece;
 
     &::before {
       content: "";
@@ -148,6 +148,15 @@
 
       background-color: @green;
       border-radius: 50%;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 3px 2px 1px #cecece;
+    }
+
+    &:active {
+      border-color: @green;
     }
   }
 

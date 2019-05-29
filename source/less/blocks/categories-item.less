@@ -1,8 +1,11 @@
 .categories-item {
+  display: flex;
+  flex-direction: column;
   position: relative;
 
+  margin-bottom: 20px;
   padding: 20px;
-  padding-bottom: 19px;
+  padding-bottom: 21px;
 
   background-color: @lightgrey;
 
@@ -51,9 +54,9 @@
   }
 }
 
-.categories__title {
+.categories-item__title {
   margin-top: 10px;
-  margin-bottom: 29px;
+  margin-bottom: 15px;
   padding-left: 71px;
 
   font-weight: normal;
@@ -63,17 +66,17 @@
   text-transform: uppercase;
 }
 
-.categories__description {
+.categories-item__description {
   margin-bottom: 20px;
   padding-bottom: 22px;
 
   border-bottom: @lightgreyborder;
 }
 
-.categories__link {
+.categories-item__link {
   position: relative;
-
-  display: inline-block;
+  margin-right: auto;
+  margin-top: auto;
 
   font-size: 16px;
   line-height: 16px;
@@ -95,7 +98,7 @@
     width: 24px;
     height: 11px;
 
-    background-image: url("/img/icon-right-arrow-long.svg");
+    background-image: url("../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
     background-size: 24px 11px;
   }
@@ -107,13 +110,14 @@
 
     width: 36px;
 
-    background-image: url("/img/icon-right-arrow-verylong.svg");
+    background-image: url("../img/icon-right-arrow-verylong.svg");
     background-size: 36px 11px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .categories-item {
+    margin-bottom: 37px;
     padding-top: 75px;
     padding-bottom: 56px;
     padding-left: 52px;
@@ -133,7 +137,7 @@
       width: 200px;
       height: 200px;
 
-      background-image: url("/img/icon-cat-slim.svg");
+      background-image: url("../img/icon-cat-slim.svg");
       background-size: 145px 194px;
     }
 
@@ -144,33 +148,35 @@
       width: 300px;
       height: 200px;
 
-      background-image: url("/img/icon-cat-pro.svg");
+      background-image: url("../img/icon-cat-pro.svg");
       background-size: 267px 111px;
     }
   }
 
-  .categories__title {
+  .categories-item__title {
     margin-top: 0;
-    margin-bottom: 26px;
+    margin-bottom: 10px;
     padding-left: 0;
 
     font-size: 36px;
     text-align: left;
   }
 
-  .categories__description {
+  .categories-item__description {
     margin-bottom: 33px;
+    border: none;
   }
 
-  .categories-item--pro .categories__description {
+  .categories-item--pro .categories-item__description {
     width: 54%;
   }
 
-  .categories-item--slim .categories__description {
+  .categories-item--slim .categories-item__description {
     width: 59%;
   }
 
-  .categories__link {
+  .categories-item__link {
+
     font-size: 20px;
     line-height: 20px;
 
@@ -180,12 +186,18 @@
       top: 5px;
       right: -48px;
     }
+
+    &:hover::after,
+    &:focus::after {
+      right: -60px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .categories-item {
     width: 570px;
+    padding-top: 73px;
 
     &::after {
       top: 44px;
@@ -202,7 +214,7 @@
       width: 100px;
       height: 100px;
 
-      background-image: url("/img/icon-cat-slim.svg");
+      background-image: url("../img/icon-cat-slim.svg");
       background-size: 73px 97px;
     }
 
@@ -213,57 +225,24 @@
       width: 150px;
       height: 100px;
 
-      background-image: url("/img/icon-cat-pro.svg");
+      background-image: url("../img/icon-cat-pro.svg");
       background-size: 134px 56px;
     }
   }
 
-  .categories-item__logo {
-    top: 47px;
-    left: 51px;
-
-    width: 100px;
-    height: 100px;
+  .categories-item__title {
+    max-width: 100%;
+    margin-bottom: 59px;
+    padding-left: 161px;
+    word-wrap: break-word;
   }
 
-  .categories-item__logo-image {
-    &--slim {
-      top: -5px;
-      left: 14px;
-
-      width: 73px;
-      height: 97px;
-    }
-
-    &--pro {
-      top: 22px;
-      left: -18px;
-
-      width: 134px;
-      height: 56px;
-    }
-  }
-
-  .categories__title {
-    margin-bottom: 75px;
-
-    text-align: center;
-  }
-
-  .categories-item--slim .categories__title {
-    margin-right: 10px;
-  }
-
-  .categories-item--pro .categories__title {
-    margin-left: 27px;
-  }
-
-  .categories__description {
+  .categories-item__description {
     margin-bottom: 6px;
   }
 
-  .categories-item--slim .categories__description,
-  .categories-item--pro .categories__description {
+  .categories-item--slim .categories-item__description,
+  .categories-item--pro .categories-item__description {
     width: 480px;
   }
 }

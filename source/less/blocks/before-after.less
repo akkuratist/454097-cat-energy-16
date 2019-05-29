@@ -1,10 +1,12 @@
 .before-after {
-  display: flex;
-  flex-direction: column;
-
   font-family: @Oswald;
 
   background-color: @lightgrey;
+}
+
+.before-after__wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .before-after__top {
@@ -12,8 +14,8 @@
 }
 
 .before-after__title {
-  margin-top: 17px;
-  margin-bottom: 22px;
+  margin-top: 15px;
+  margin-bottom: 24px;
 }
 
 .before-after__stats,
@@ -23,7 +25,7 @@
 }
 
 .before-after__promo {
-  margin-bottom: 26px;
+  margin-bottom: 24px;
   padding-right: 30px;
 
   font-family: "Arial", sans-serif;
@@ -54,7 +56,7 @@
 
 @media (min-width: @tablet-width) {
   .before-after {
-    padding-top: 43px;
+    padding-top: 42px;
 
     background-color: white;
     border-top: @lightgreyborder;
@@ -103,16 +105,19 @@
 
 @media (min-width: @desktop-width) {
   .before-after {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    max-width: 1300px;
-    margin: 0 auto;
     padding-top: 0;
     padding-bottom: 0;
 
     background-color: @lightgrey;
     border: none;
+  }
+
+  .before-after__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    max-width: 1300px;
+    margin: 0 auto;
   }
 
   .before-after__top {
@@ -133,7 +138,7 @@
   }
 
   .before-after__title {
-    margin-top: -171px;
+    margin-top: -133px;
     margin-bottom: 130px;
   }
 
