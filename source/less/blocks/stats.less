@@ -26,8 +26,9 @@
 .stats__amount {
   display: block;
   width: 100%;
-  padding: 13px 0;
-  padding-bottom: 17px;
+  padding: 0;
+  padding-top: 13px;
+  margin-bottom: 9px;
 
   font-weight: normal;
   font-size: 24px;
@@ -38,14 +39,11 @@
 }
 
 .stats__type {
-  position: absolute;
-  top: 45px;
   z-index: 1;
-
-  display: inline-block;
+  justify-self: flex-end;
   align-self: center;
   max-width: 80px;
-
+  margin-bottom: -15px;
   font-size: 12px;
   line-height: 12px;
   font-family: "Arial", sans-serif;
@@ -76,17 +74,17 @@
   }
 
   .stats__amount {
-    padding: 21px 0;
-    padding-bottom: 25px;
+    margin-bottom: 17px;
+    padding: 0;
+    padding-top: 21px;
 
     font-size: 30px;
   }
 
   .stats__type {
-    top: 62px;
-
     max-width: 145px;
     padding: 0 7px;
+    margin-bottom: -6px;
 
     font-size: 14px;
     line-height: 14px;
@@ -126,6 +124,7 @@
 
   .stats__cost-amount {
     display: block;
+    flex-shrink: 0;
     margin-top: 0;
     margin-left: 64px;
 

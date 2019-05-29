@@ -8,6 +8,36 @@
   <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
   <link href="css/style-min.css" rel="stylesheet">
+
+  <!-- Pixel Glass -->
+  <style>
+      HTML {
+        opacity: 0.4;
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        /* Mobile layout by default */
+        background-image: url("img/preview/form-320.jpg");
+      }
+
+      /* Tablet */
+      @media (min-width: 768px) {
+        HTML {
+          /* Tablet layout */
+          background-image: url("img/preview/form-768.jpg");
+        }
+      }
+
+      /* Desktop */
+      @media (min-width: 1300px) {
+        HTML {
+          /* Desktop layout */
+          background-image: url("img/preview/form-1300.jpg");
+        }
+      }
+    </style>
+    <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+    <script src="../node_modules/pixel-glass/script.js"></script>
+    <!-- // Pixel Glass -->
 </head>
 
 <body>
@@ -42,7 +72,7 @@
     </div>
   </header>
   <main class="page-main">
-    <section class="food-programm-form ">
+    <section class="food-programm-form">
       <section class="food-programm-form__header wrapper">
         <h1 class="section-title food-programm-form__title">Подбор программы</h1>
         <p class="section-description food-programm-form__description">Заполните анкету и мы подберем программу питания

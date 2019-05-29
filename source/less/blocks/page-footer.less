@@ -1,4 +1,5 @@
 .page-footer {
+  min-height: 240px;
   padding-top: 38px;
 
   background-color: @lightgrey;
@@ -33,14 +34,15 @@
 
 @media (min-width: @tablet-width) {
   .page-footer {
-    padding-top: 40px;
+    min-height: 145px;
+    padding-top: 63px;
   }
 
   .page-footer__wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 23px 30px;
+    padding: 0 30px;
   }
 
   .page-footer__logo {
@@ -60,10 +62,10 @@
 
 @media (min-width: @desktop-width) {
   .page-footer {
-    padding-top: 0;
+    padding-top: 63px;
   }
 
   .page-footer__wrapper {
-    padding: 63px 40px;
+    padding: 0 40px;
   }
 }
